@@ -1,5 +1,6 @@
 import { combineReducers } from "redux";
+import getAllSportsReducer from "./getAllSportsReducer";
 
 export default combineReducers({
-  replace: () => "replace"
+  sports: getAllSportsReducer
 });
