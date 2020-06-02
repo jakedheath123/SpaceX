@@ -1,4 +1,4 @@
-# sport-tracker
+# sports-tracker
 
 ## Overview
 
