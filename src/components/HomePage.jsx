@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getAllSports } from "../actions";
+import SportsCard from "./SportsCard";
 
 class HomePage extends Component {
   componentDidMount() {
@@ -12,22 +13,20 @@ class HomePage extends Component {
     if (allSports.length === 0) return <h1>Loading...</h1>;
     return (
       <main>
-        {allSports.map(sport => {
-          return (
-            <li>
-              <ul>
-                <h1>{sport.strSport}</h1>
-                <img src={sport.strSportThumb} alt="Sport Logo" />
-              </ul>
-            </li>
-          );
-        })}
+        <ul>
+          {allSports.map(sport => {
+            return (
+              <li key={sport.idSport}>
+                <SportsCard sport={sport} />
+              </li>
+            );
+          })}
+        </ul>
       </main>
     );
   };
 
   render() {
-    console.log(this.props.allSports);
     return <div>{this.renderSportsList()}</div>;
   }
 }
