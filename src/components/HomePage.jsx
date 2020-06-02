@@ -1,15 +1,14 @@
-import React, { Component } from "react";
+import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getAllSports } from "../actions";
 import SportsCard from "./SportsCard";
 
-class HomePage extends Component {
-  componentDidMount() {
-    this.props.getAllSports();
-  }
+const HomePage = ({ getAllSports, allSports }) => {
+  useEffect(() => {
+    getAllSports();
+  });
 
-  renderSportsList = () => {
-    const { allSports } = this.props;
+  const renderSportsList = () => {
     if (allSports.length === 0) return <h1>Loading...</h1>;
     return (
       <main>
@@ -22,10 +21,8 @@ class HomePage extends Component {
     );
   };
 
-  render() {
-    return <div>{this.renderSportsList()}</div>;
-  }
-}
+  return <div>{renderSportsList()}</div>;
+};
 
 const mapStateToProps = state => {
   return {
