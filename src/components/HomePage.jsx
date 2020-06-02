@@ -15,11 +15,7 @@ class HomePage extends Component {
       <main>
         <ul>
           {allSports.map(sport => {
-            return (
-              <li key={sport.idSport}>
-                <SportsCard sport={sport} />
-              </li>
-            );
+            return <SportsCard key={sport.idSport} sport={sport} />;
           })}
         </ul>
       </main>
