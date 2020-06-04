@@ -1,35 +1,35 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getAllSports } from "../actions";
-import SportsCard from "./SportsCard";
+import { getLaunches } from "../actions";
+import LaunchesCard from "./LaunchesCard";
 
-const HomePage = ({ getAllSports, allSports }) => {
+const HomePage = ({ getLaunches, launches }) => {
   useEffect(() => {
-    getAllSports();
-  });
+    getLaunches();
+  }, []);
 
-  const renderSportsList = () => {
-    if (allSports.length === 0) return <h1>Loading...</h1>;
+  const renderLaunchesList = () => {
+    if (launches.length === 0) return <h1>Loading...</h1>;
     return (
       <main>
         <ul>
-          {allSports.map(sport => {
-            return <SportsCard key={sport.idSport} sport={sport} />;
+          {launches.map(launch => {
+            return <LaunchesCard key={launch.flight_number} launch={launch} />;
           })}
         </ul>
       </main>
     );
   };
 
-  return <div>{renderSportsList()}</div>;
+  return <div>{renderLaunchesList()}</div>;
 };
 
 const mapStateToProps = state => {
   return {
-    allSports: state.sports
+    launches: state.launches
   };
 };
 
 export default connect(mapStateToProps, {
-  getAllSports
+  getLaunches
 })(HomePage);

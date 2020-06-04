@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import getAllSportsReducer from "./getAllSportsReducer";
+import getAllLaunches from "./getAllLaunches";
 
 export default combineReducers({
-  sports: getAllSportsReducer
+  launches: getAllLaunches
 });

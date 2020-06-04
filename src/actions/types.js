@@ -1,1 +1,1 @@
-export const GET_ALL_SPORTS = "GET_ALL_SPORTS";
+export const GET_LAUNCHES = "GET_LAUNCHES";

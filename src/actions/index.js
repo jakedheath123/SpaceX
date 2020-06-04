@@ -1,10 +1,10 @@
-import theSportsDb from "../apis/theSportsDb";
-import { GET_ALL_SPORTS } from "./types";
+import spaceXDb from "../apis/spaceXDb";
+import { GET_LAUNCHES } from "./types";
 
-export const getAllSports = () => dispatch =>
-  theSportsDb.get("/all_sports.php").then(response => {
+export const getLaunches = () => dispatch =>
+  spaceXDb.get("/launches?limit=20").then(response => {
     return dispatch({
-      type: GET_ALL_SPORTS,
-      payload: response.data.sports
+      type: GET_LAUNCHES,
+      payload: response.data
     });
   });
