@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "../images/logo.png";
 import image1 from "../images/image1.jpg";
+import GoogleAuth from "./GoogleAuth";
 
-class SignInPage extends Component {
-  render() {
-    return (
-      <>
-        <img src={logo} alt="Logo" className="ui medium image" />
-        <img src={image1} alt="Rocket launch" />
-      </>
-    );
-  }
-}
+const SignInPage = () => {
+  return (
+    <>
+      <img src={logo} alt="Logo" className="ui medium image" />
+      <img src={image1} alt="Rocket launch" />
+      <h1>Welcome</h1>
+      <GoogleAuth />
+    </>
+  );
+};
 
 export default SignInPage;
