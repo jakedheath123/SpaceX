@@ -1,5 +1,11 @@
 import spaceXDb from "../apis/spaceXDb";
-import { GET_LAUNCHES, SIGN_IN, GET_SINGLE_LAUNCH, IS_VISIBLE } from "./types";
+import {
+  GET_LAUNCHES,
+  SIGN_IN,
+  GET_SINGLE_LAUNCH,
+  IS_VISIBLE,
+  SET_FALSE
+} from "./types";
 
 export const getLaunches = () => dispatch =>
   spaceXDb.get("/launches?limit=20").then(response => {
@@ -28,5 +34,11 @@ export const signIn = userId => {
 export const toggleVisible = () => {
   return {
     type: IS_VISIBLE
+  };
+};
+
+export const setFalse = () => {
+  return {
+    type: SET_FALSE
   };
 };
