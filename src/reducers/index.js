@@ -1,8 +1,8 @@
 import { combineReducers } from "redux";
-import getAllLaunches from "./getAllLaunches";
+import getAllLaunchesReducer from "./getAllLaunchesReducer";
 import googleAuthReducer from "./googleAuthReducer";
 
 export default combineReducers({
-  launches: getAllLaunches,
+  launches: getAllLaunchesReducer,
   auth: googleAuthReducer
 });
