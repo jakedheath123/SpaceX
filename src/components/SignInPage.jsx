@@ -10,6 +10,7 @@ const SignInPage = () => {
       <img src={image1} alt="Rocket launch" />
       <h1>Welcome</h1>
       <GoogleAuth />
+      <h2>or</h2>
     </>
   );
 };
