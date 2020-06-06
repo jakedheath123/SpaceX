@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { getLaunches } from "../actions";
 import LaunchesCard from "./LaunchesCard";
+import Loader from "./Loader";
 
 const HomePage = ({ getLaunches, launches }) => {
   useEffect(() => {
@@ -9,7 +10,7 @@ const HomePage = ({ getLaunches, launches }) => {
   }, []);
 
   const renderLaunchesList = () => {
-    if (launches.length === 0) return <h1>Loading...</h1>;
+    if (launches.length === 0) return <Loader />;
     return (
       <main>
         <ul>
