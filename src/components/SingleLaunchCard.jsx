@@ -30,7 +30,9 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   return (
     <main>
       <h1>{mission_name}</h1>
-      <ViewToggler>
+      <img src={mission_patch_small} alt="Mission Patch" />
+      <p>{details ? `Mission Details: ${details}` : null}</p>
+      <ViewToggler id={flight_number}>
         <br></br>
         {!flickr_images.length ? "No images" : null}
         {flickr_images.map(image => {
