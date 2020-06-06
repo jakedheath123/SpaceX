@@ -10,7 +10,7 @@ const HomePage = ({ getLaunches, launches }) => {
   }, []);
 
   const renderLaunchesList = () => {
-    if (launches.length === 0) return <Loader />;
+    if (!launches.length) return <Loader />;
     return (
       <main>
         <ul>
