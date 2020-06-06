@@ -1,8 +1,12 @@
-import React from "react";
-import { toggleVisible } from "../actions";
+import React, { useEffect } from "react";
+import { toggleVisible, setFalse } from "../actions";
 import { connect } from "react-redux";
 
-const ViewToggler = ({ isVisible, children, toggleVisible }) => {
+const ViewToggler = ({ isVisible, children, toggleVisible, setFalse, id }) => {
+  useEffect(() => {
+    setFalse();
+  }, [id]);
+
   return (
     <>
       <button onClick={toggleVisible}>
@@ -20,5 +24,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  toggleVisible
+  toggleVisible,
+  setFalse
 })(ViewToggler);
