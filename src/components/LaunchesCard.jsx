@@ -2,15 +2,21 @@ import React from "react";
 import { Link } from "@reach/router";
 
 const LaunchesCard = ({ launch }) => {
-  // console.log(launch);
-  const { flight_number, mission_name, links } = launch;
+  const { flight_number, mission_name, links, launch_year } = launch;
 
   return (
     <li>
-      <h1>{mission_name}</h1>
-      <Link to={`/launches/${flight_number}`}>
-        <img src={links.mission_patch} alt="Launch Logo" />
-      </Link>
+      <div className="ui list">
+        <h1>{mission_name}</h1>
+        <h2>{launch_year}</h2>
+        <Link to={`/launches/${flight_number}`}>
+          <img
+            src={links.mission_patch}
+            alt="Launch Logo"
+            className="ui medium image"
+          />
+        </Link>
+      </div>
     </li>
   );
 };
