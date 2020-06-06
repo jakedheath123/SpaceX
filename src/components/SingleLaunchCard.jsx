@@ -30,7 +30,11 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   return (
     <main>
       <h1>{mission_name}</h1>
-      <ViewToggler></ViewToggler>
+
+      <ViewToggler>
+        <br></br>
+        CHILDREN
+      </ViewToggler>
     </main>
   );
 };
