@@ -16,8 +16,8 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
     details,
     launch_date_local,
     links,
-    rocket,
-    launch_failure_details
+    rocket
+    // launch_failure_details
   } = oneFlight;
   const {
     mission_patch_small,
@@ -26,14 +26,23 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
     flickr_images
   } = links;
   const { rocket_name, rocket_type } = rocket;
-  const { time, reason } = launch_failure_details;
+  // const { time, reason } = launch_failure_details;
   return (
     <main>
       <h1>{mission_name}</h1>
-
       <ViewToggler>
         <br></br>
-        CHILDREN
+        {!flickr_images.length ? "No images" : null}
+        {flickr_images.map(image => {
+          return (
+            <img
+              key={image}
+              src={image}
+              alt="Rocket Image"
+              className="ui medium spaced image"
+            />
+          );
+        })}
       </ViewToggler>
     </main>
   );
