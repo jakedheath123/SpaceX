@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "@reach/router";
+import { connect } from "react-redux";
 
-const About = () => {
+import { getCompanyInfo } from "../actions";
+
+const About = ({ getCompanyInfo }) => {
+  useEffect(() => {
+    getCompanyInfo();
+  }, []);
+
   return (
     <div>
       <Link to="/home">
@@ -12,4 +19,8 @@ const About = () => {
   );
 };
 
-export default About;
+const mapStateToProps = state => {};
+
+export default connect(mapStateToProps, {
+  getCompanyInfo
+})(About);
