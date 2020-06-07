@@ -44,7 +44,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
         <p>{ceo}</p>
         <img
           src={elonImage}
-          alt="Elon Musk photo"
+          alt="Elon Musk avatar"
           className="ui medium image"
         />
       </div>
@@ -53,7 +53,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
         <p>{coo}</p>
         <img
           src={gwynneShotwellImage}
-          alt="Gwynne Shotwell photo"
+          alt="Gwynne Shotwell avatar"
           className="ui medium image"
         />
       </div>
@@ -62,7 +62,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
         <p>{cto_propulsion}</p>
         <img
           src={tomMuellerImage}
-          alt="Tom Mueller photo"
+          alt="Tom Mueller avatar"
           className="ui medium image"
         />
       </div>
