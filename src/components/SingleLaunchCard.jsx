@@ -75,7 +75,7 @@ const SingleLaunchCard = ({
             <img
               key={image}
               src={image}
-              alt="Rocket Image"
+              alt="Rocket "
               className="ui medium spaced image"
             />
           );
