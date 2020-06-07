@@ -32,7 +32,33 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
       <h1>{mission_name}</h1>
       <img src={mission_patch_small} alt="Mission Patch" />
       <p>{details ? `Mission Details: ${details}` : null}</p>
+      <table className="ui grey inverted table">
+        <thead className="">
+          <tr className="">
+            <th className="">Launch Date</th>
+            <th className="">Rocket Name</th>
+            <th className="">Rocket Type</th>
+            <th className="">Article Link</th>
+            <th className="">Video Link</th>
+          </tr>
+        </thead>
+        <tbody className="">
+          <tr className="">
+            <td className="">{launch_date_local}</td>
+            <td className="">{rocket_name}</td>
+            <td className="">{rocket_type}</td>
+            <td className="">
+              <a href={article_link}>Space News</a>
+            </td>
+            <td className="">
+              <a href={video_link}>Youtube</a>
+            </td>
+          </tr>
+          <tr className=""></tr>
+        </tbody>
+      </table>
       <ViewToggler id={flight_number}>
+        <br></br>
         <br></br>
         {!flickr_images.length ? "No images" : null}
         {flickr_images.map(image => {
@@ -45,6 +71,9 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
             />
           );
         })}
+        <br></br>
+        <br></br>
+        <hr></hr>
       </ViewToggler>
     </main>
   );
