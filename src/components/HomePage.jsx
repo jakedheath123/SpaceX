@@ -24,6 +24,7 @@ const HomePage = ({ getLaunches, launches }) => {
             <i className="square icon" style={{ color: "green" }} /> failure{" "}
             <i className="square icon" style={{ color: "red" }} />{" "}
           </h4>
+          <h2>Missions</h2>
           {launches.map(launch => {
             return <LaunchesCard key={launch.flight_number} launch={launch} />;
           })}
