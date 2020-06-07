@@ -1,13 +1,19 @@
 import React, { useEffect } from "react";
 import { Link } from "@reach/router";
 import { connect } from "react-redux";
+import elonImage from "../images/elon.jpg";
+import gwynneShotwellImage from "../images/gwynneShotwell.png";
+import tomMuellerImage from "../images/tomMueller.jpg";
 
 import { getCompanyInfo } from "../actions";
+import Loader from "./Loader";
 
 const About = ({ getCompanyInfo, spaceXInfo }) => {
   useEffect(() => {
     getCompanyInfo();
   }, []);
+
+  if (!spaceXInfo) return <Loader />;
 
   const {
     name,
@@ -33,7 +39,34 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
       <Link to="/home">
         <button>Back</button>
       </Link>
-      <h1>About PAge</h1>
+      <div>
+        <h2>CEO and CTO</h2>
+        <p>{ceo}</p>
+        <img
+          src={elonImage}
+          alt="Elon Musk photo"
+          className="ui medium image"
+        />
+      </div>
+      <div>
+        <h2>COO</h2>
+        <p>{coo}</p>
+        <img
+          src={gwynneShotwellImage}
+          alt="Gwynne Shotwell photo"
+          className="ui medium image"
+        />
+      </div>
+      <div>
+        <h2>CTO Propulsion</h2>
+        <p>{cto_propulsion}</p>
+        <img
+          src={tomMuellerImage}
+          alt="Tom Mueller photo"
+          className="ui medium image"
+        />
+      </div>
+      <p>{summary}</p>
     </div>
   );
 };
