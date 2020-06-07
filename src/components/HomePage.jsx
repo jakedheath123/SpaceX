@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { Link } from "@reach/router";
+
 import { getLaunches } from "../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "./Loader";
@@ -13,6 +15,9 @@ const HomePage = ({ getLaunches, launches }) => {
     if (!launches.length) return <Loader />;
     return (
       <main>
+        <Link to="/about">
+          <button>About</button>
+        </Link>
         <ul>
           <h4>
             Key : success{" "}
