@@ -12,14 +12,14 @@ const LaunchesCard = ({ launch }) => {
 
   return (
     <li>
-      <div role="list" class="ui list">
-        <div role="listitem" class="item">
+      <div role="list" className="ui list">
+        <div role="listitem" className="item">
           <img
             src={links.mission_patch}
             alt="Launch Logo"
             className="ui small image"
           />
-          <div class="content">
+          <div className="content">
             <h1
               className="header"
               style={launch_success ? { color: "green" } : { color: "red" }}
