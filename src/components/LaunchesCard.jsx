@@ -12,11 +12,11 @@ const LaunchesCard = ({ launch }) => {
 
   return (
     <li>
-      <div role="list" class="ui divided middle aligned list">
-        <div role="listitem" class="item">
-          <div class="right floated content">
+      <div role="list" className="ui divided middle aligned list">
+        <div role="listitem" className="item">
+          <div className="right floated content">
             <Link to={`/launches/${flight_number}`}>
-              <button class="ui button">Launch Details</button>
+              <button className="ui button">Launch Details</button>
             </Link>
           </div>
           <img
@@ -24,7 +24,7 @@ const LaunchesCard = ({ launch }) => {
             alt="Launch Logo"
             className="ui small image"
           />
-          <div class="content">
+          <div className="content">
             <h1>Mission Name </h1>
             <p style={launch_success ? { color: "green" } : { color: "red" }}>
               {mission_name}{" "}
