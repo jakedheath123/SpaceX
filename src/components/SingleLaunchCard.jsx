@@ -1,10 +1,16 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getSingleLaunch } from "../actions";
+import { getSingleLaunch, setFalse } from "../actions";
 import Loader from "./Loader";
 import ViewToggler from "./ViewToggler";
+import { Link } from "@reach/router";
 
-const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
+const SingleLaunchCard = ({
+  getSingleLaunch,
+  flight_number,
+  oneFlight,
+  setFalse
+}) => {
   useEffect(() => {
     getSingleLaunch(flight_number);
   }, [flight_number]);
@@ -29,6 +35,9 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   // const { time, reason } = launch_failure_details;
   return (
     <main>
+      <Link to="/home">
+        <button onClick={setFalse}>Back</button>
+      </Link>
       <h1>{mission_name}</h1>
       <img src={mission_patch_small} alt="Mission Patch" />
       <p>{details ? `Mission Details: ${details}` : null}</p>
@@ -86,5 +95,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  getSingleLaunch
+  getSingleLaunch,
+  setFalse
 })(SingleLaunchCard);
