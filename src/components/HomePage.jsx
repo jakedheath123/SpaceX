@@ -14,6 +14,11 @@ const HomePage = ({ getLaunches, launches }) => {
     return (
       <main>
         <ul>
+          <h4>
+            Key : success{" "}
+            <i className="square icon" style={{ color: "green" }} /> failure{" "}
+            <i className="square icon" style={{ color: "red" }} />{" "}
+          </h4>
           {launches.map(launch => {
             return <LaunchesCard key={launch.flight_number} launch={launch} />;
           })}

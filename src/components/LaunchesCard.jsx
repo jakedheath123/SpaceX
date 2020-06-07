@@ -12,17 +12,29 @@ const LaunchesCard = ({ launch }) => {
 
   return (
     <li>
-      <div className="ui list">
-        <h1>{mission_name}</h1>
-        <h2>{launch_year}</h2>
-        <Link to={`/launches/${flight_number}`}>
+      <div role="list" class="ui divided middle aligned list">
+        <div role="listitem" class="item">
+          <div class="right floated content">
+            <Link to={`/launches/${flight_number}`}>
+              <button class="ui button">Launch Details</button>
+            </Link>
+          </div>
           <img
             src={links.mission_patch}
             alt="Launch Logo"
-            className="ui medium image"
+            className="ui small image"
           />
-        </Link>
+          <div class="content">
+            <h1>Mission Name </h1>
+            <p style={launch_success ? { color: "green" } : { color: "red" }}>
+              {mission_name}{" "}
+            </p>
+            <h2>Launch Year</h2>
+            <p>{launch_year}</p>
+          </div>
+        </div>
       </div>
+      <br></br>
     </li>
   );
 };
