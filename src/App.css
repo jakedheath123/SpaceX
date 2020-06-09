@@ -44,13 +44,13 @@ body {
   }
 }
 
-img {
+/* img {
   border-radius: 8px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
   width: 150px;
-}
+} */
 
 .grid {
   display: grid;
@@ -82,5 +82,14 @@ img {
 }
 
 .ind {
+  padding: 5%;
+}
+
+.li-image {
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  width: 150px;
   padding: 5%;
 }

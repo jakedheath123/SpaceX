@@ -13,7 +13,7 @@ const LaunchesCard = ({ launch }) => {
   return (
     <li className="main-grid">
       <div className="main-list">
-        <img src={links.mission_patch} alt="Launch Logo" className="ind" />
+        <img src={links.mission_patch} alt="Launch Logo" className="li-image" />
         <h1
           className="ind"
           style={launch_success ? { color: "green" } : { color: "red" }}
