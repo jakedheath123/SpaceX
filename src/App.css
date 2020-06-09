@@ -173,7 +173,7 @@ body {
 
 .main-list {
   display: flex;
-  /* border: 1px white solid; */
+  border: 1px white solid;
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem 0rem 3rem 0rem;
