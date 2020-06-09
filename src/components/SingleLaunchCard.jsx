@@ -41,7 +41,7 @@ const SingleLaunchCard = ({
       <h1>{mission_name}</h1>
       <img src={mission_patch_small} alt="Mission Patch" />
       <p>{details ? `Mission Details: ${details}` : null}</p>
-      <table className="ui grey inverted table">
+      <table className="ui celled inverted selectable table">
         <thead className="">
           <tr className="">
             <th className="">Launch Date</th>
