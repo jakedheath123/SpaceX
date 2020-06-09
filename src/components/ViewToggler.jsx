@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 const ViewToggler = ({ isVisible, children, toggleVisible }) => {
   return (
     <>
-      <button onClick={toggleVisible}>
+      <button onClick={toggleVisible} className="ui button">
         {isVisible ? "Hide Flickr Images" : "Display Flickr Images"}
       </button>
       {isVisible && children}

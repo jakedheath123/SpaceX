@@ -59,6 +59,7 @@ body {
 
 .about {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   /* border: white 1px solid; */

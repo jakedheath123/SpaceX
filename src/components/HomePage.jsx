@@ -16,7 +16,10 @@ const HomePage = ({ getLaunches, launches }) => {
     return (
       <main>
         <Link to="/about">
-          <button>About</button>
+          <button className="ui button">About</button>
+        </Link>
+        <Link to="/">
+          <button className="ui button">Sign Out</button>
         </Link>
         <ul>
           <h4>

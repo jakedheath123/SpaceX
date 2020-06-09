@@ -36,7 +36,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
   return (
     <>
       <Link to="/home">
-        <button>Back</button>
+        <button className="ui button">Back</button>
       </Link>
       <div className="grid">
         <div className="about">

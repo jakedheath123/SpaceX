@@ -36,7 +36,9 @@ const SingleLaunchCard = ({
   return (
     <main>
       <Link to="/home">
-        <button onClick={setFalse}>Back</button>
+        <button onClick={setFalse} className="ui button">
+          Back
+        </button>
       </Link>
       <h1>{mission_name}</h1>
       <img src={mission_patch_small} alt="Mission Patch" />

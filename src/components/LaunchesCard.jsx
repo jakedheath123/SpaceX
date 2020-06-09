@@ -22,7 +22,7 @@ const LaunchesCard = ({ launch }) => {
         </h1>
         <p className="ind">{launch_year}</p>
         <Link to={`/launches/${flight_number}`} className="ind">
-          <button className="ui button">Launch Details</button>
+          <button className="ui secondary button">Launch Details</button>
         </Link>
       </div>
     </li>
