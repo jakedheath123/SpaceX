@@ -17,6 +17,7 @@ const LaunchesCard = ({ launch }) => {
         alt="Launch Logo"
         className="ui medium image"
       />
+
       <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
         {mission_name}{" "}
       </h1>

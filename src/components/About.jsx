@@ -37,9 +37,12 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
     <main className="container-about">
       <div className="about-links">
         <Link to="/home">
-          <button className="ui button" style={{ margin: 10 }}>
+          <p
+            className="hvr-underline-from-left"
+            style={{ margin: 10, color: "white" }}
+          >
             Back
-          </button>
+          </p>
         </Link>
       </div>
 

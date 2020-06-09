@@ -36,9 +36,13 @@ const SingleLaunchCard = ({
   return (
     <main>
       <Link to="/home">
-        <button onClick={setFalse} className="ui button">
+        <p
+          onClick={setFalse}
+          className="hvr-underline-from-left"
+          style={{ margin: 10, color: "white" }}
+        >
           Back
-        </button>
+        </p>
       </Link>
       <h1>{mission_name}</h1>
       <img src={mission_patch_small} alt="Mission Patch" />
@@ -84,7 +88,6 @@ const SingleLaunchCard = ({
         })}
         <br></br>
         <br></br>
-        <hr></hr>
       </ViewToggler>
     </main>
   );

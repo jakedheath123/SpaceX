@@ -17,14 +17,20 @@ const HomePage = ({ getLaunches, launches }) => {
       <main className="container-main">
         <div className="links">
           <Link to="/about">
-            <button className="ui button" style={{ margin: 10 }}>
+            <p
+              className="hvr-underline-from-left"
+              style={{ margin: 10, color: "white" }}
+            >
               About
-            </button>
+            </p>
           </Link>
           <Link to="/">
-            <button className="ui button" style={{ margin: 10 }}>
+            <p
+              className="hvr-underline-from-left"
+              style={{ margin: 10, color: "white" }}
+            >
               Sign Out
-            </button>
+            </p>
           </Link>
         </div>
         <div className="key">
