@@ -232,7 +232,7 @@ body {
     justify-content: center;
   }
   .logo-signIn {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    max-height: auto;
   }
 }
