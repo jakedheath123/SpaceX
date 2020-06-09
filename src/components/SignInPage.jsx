@@ -7,7 +7,7 @@ const SignInPage = () => {
   return (
     <div className="container-signIn">
       <div className="logo">
-        <img src={logo} alt="Logo" className="ui medium image" />
+        <img src={logo} alt="Logo" className="logo-signIn" />
       </div>
       <div className="image-signIn">
         <img src={image1} alt="Rocket launch" className="rocket-image" />
