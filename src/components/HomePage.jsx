@@ -14,24 +14,38 @@ const HomePage = ({ getLaunches, launches }) => {
   const renderLaunchesList = () => {
     if (!launches.length) return <Loader />;
     return (
-      <main>
-        <Link to="/about">
-          <button className="ui button">About</button>
-        </Link>
-        <Link to="/">
-          <button className="ui button">Sign Out</button>
-        </Link>
-        <ul>
+      <main className="container-main">
+        <div className="links">
+          <Link to="/about">
+            <button className="ui button" style={{ margin: 10 }}>
+              About
+            </button>
+          </Link>
+          <Link to="/">
+            <button className="ui button" style={{ margin: 10 }}>
+              Sign Out
+            </button>
+          </Link>
+        </div>
+        <div className="key">
           <h4>
             Key : success{" "}
             <i className="square icon" style={{ color: "green" }} /> failure{" "}
             <i className="square icon" style={{ color: "red" }} />{" "}
           </h4>
+        </div>
+        <div className="head">
           <h2>Missions</h2>
-          {launches.map(launch => {
-            return <LaunchesCard key={launch.flight_number} launch={launch} />;
-          })}
-        </ul>
+        </div>
+        <div className="list">
+          <ul>
+            {launches.map(launch => {
+              return (
+                <LaunchesCard key={launch.flight_number} launch={launch} />
+              );
+            })}
+          </ul>
+        </div>
       </main>
     );
   };

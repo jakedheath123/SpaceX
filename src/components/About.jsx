@@ -34,54 +34,71 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
   const { website, twitter, elon_twitter } = links;
 
   return (
-    <>
-      <Link to="/home">
-        <button className="ui button">Back</button>
-      </Link>
-      <div className="grid">
-        <div className="about">
-          <h2>CEO and CTO</h2>
-          <p>{ceo}</p>
-          <img
-            src={elonImage}
-            alt="Elon Musk avatar"
-            className="ui medium image"
-          />
-        </div>
-        <div className="about">
-          <h2>COO</h2>
-          <p>{coo}</p>
-          <img
-            src={gwynneShotwellImage}
-            alt="Gwynne Shotwell avatar"
-            className="ui medium image"
-          />
-        </div>
-        <div className="about">
-          <h2>CTO Propulsion</h2>
-          <p>{cto_propulsion}</p>
-          <img
-            src={tomMuellerImage}
-            alt="Tom Mueller avatar"
-            className="ui medium image"
-          />
-        </div>
-        <div>
-          <h1>{name}</h1>
-          <p>{summary}</p>
-        </div>
-        <div>
-          <ul>
-            <li>Founder: {founder}</li>
-            <li>Founded: {founded}</li>
-            <li>Employees: {employees}</li>
-            <li>Vehicles: {vehicles}</li>
-            <li>Launch Sites: {launch_sites}</li>
-            <li>Valuation : ${valuation}</li>
-          </ul>
-        </div>
+    <main className="container-about">
+      <div className="about-links">
+        <Link to="/home">
+          <button className="ui button" style={{ margin: 10 }}>
+            Back
+          </button>
+        </Link>
       </div>
-    </>
+
+      <div className="content-1">
+        <h2>CEO and CTO</h2>
+        <p>{ceo}</p>
+        <img
+          src={elonImage}
+          alt="Elon Musk avatar"
+          className="ui medium image"
+        />
+      </div>
+      <div className="content-2">
+        <h2>COO</h2>
+        <p>{coo}</p>
+        <img
+          src={gwynneShotwellImage}
+          alt="Gwynne Shotwell avatar"
+          className="ui medium image"
+        />
+      </div>
+      <div className="content-3">
+        <h2>CTO Propulsion</h2>
+        <p>{cto_propulsion}</p>
+        <img
+          src={tomMuellerImage}
+          alt="Tom Mueller avatar"
+          className="ui medium image"
+        />
+      </div>
+
+      <div className="header">
+        <h1>{name}</h1>
+        <p>{summary}</p>
+      </div>
+      <div className="sidebar">
+        <ul>
+          <li>Founder: {founder}</li>
+          <li>Founded: {founded}</li>
+          <li>Employees: {employees}</li>
+          <li>Vehicles: {vehicles}</li>
+          <li>Launch Sites: {launch_sites}</li>
+          <li>Valuation : ${valuation}</li>
+        </ul>
+      </div>
+      <div className="box-1">
+        <h2>Headquarters</h2>
+        <p>{address}</p>
+        <p>{city}</p>
+        <p>{state}</p>
+      </div>
+      <div className="box-2">
+        <h2>Links</h2>
+        <p>{website}</p>
+        <p>{twitter}</p>
+        <p>{elon_twitter}</p>
+      </div>
+      <footer className="footer">FOOTER &copy; 2020</footer>
+    </main>
   );
 };
 

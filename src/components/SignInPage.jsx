@@ -5,13 +5,19 @@ import GoogleAuth from "./GoogleAuth";
 
 const SignInPage = () => {
   return (
-    <>
-      <img src={logo} alt="Logo" className="ui medium image" />
-      <img src={image1} alt="Rocket launch" />
-      <h1>Welcome</h1>
-      <GoogleAuth />
-      <h2>or</h2>
-    </>
+    <div className="container-signIn">
+      <div className="logo">
+        <img src={logo} alt="Logo" className="ui medium image" />
+      </div>
+      <div className="image-signIn">
+        <img src={image1} alt="Rocket launch" className="rocket-image" />
+      </div>
+      <div className="welcome">
+        <h1>Welcome</h1>
+        <GoogleAuth />
+        <h2>or</h2>
+      </div>
+    </div>
   );
 };
 
