@@ -11,7 +11,7 @@ import Loader from "./Loader";
 const About = ({ getCompanyInfo, spaceXInfo }) => {
   useEffect(() => {
     getCompanyInfo();
-  }, []);
+  }, [getCompanyInfo]);
 
   if (!spaceXInfo) return <Loader />;
 
