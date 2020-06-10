@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "@reach/router";
+import logo from "../images/logo.png";
 
 import { getLaunches } from "../actions";
 import LaunchesCard from "./LaunchesCard";
@@ -9,13 +10,14 @@ import Loader from "./Loader";
 const HomePage = ({ getLaunches, launches }) => {
   useEffect(() => {
     getLaunches();
-  }, []);
+  }, [getLaunches]);
 
   const renderLaunchesList = () => {
     if (!launches.length) return <Loader />;
     return (
       <main className="container-main">
         <div className="links">
+          {/* <img src={logo} alt="spaceX logo" className="ui small image" /> */}
           <Link to="/about">
             <p className="hvr-underline-from-left">About</p>
           </Link>

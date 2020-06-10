@@ -8,7 +8,7 @@ import { Link } from "@reach/router";
 const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   useEffect(() => {
     getSingleLaunch(flight_number);
-  }, [flight_number]);
+  }, [getSingleLaunch, flight_number]);
 
   if (!oneFlight) return <Loader />;
 
