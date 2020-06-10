@@ -1,6 +1,7 @@
 import React from "react";
-import { toggleVisible } from "../actions";
 import { connect } from "react-redux";
+
+import { toggleVisible } from "../actions";
 
 const ViewToggler = ({ isVisible, children, toggleVisible }) => {
   return (

@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "@reach/router";
-import logo from "../images/logo.png";
 
+import logo from "../images/logo.png";
 import { getLaunches } from "../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "./Loader";

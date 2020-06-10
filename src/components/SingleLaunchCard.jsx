@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
+import { Link } from "@reach/router";
+
 import { getSingleLaunch } from "../actions";
 import Loader from "./Loader";
 import ViewToggler from "./ViewToggler";
-import { Link } from "@reach/router";
 
 const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   useEffect(() => {

@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "@reach/router";
-import { setFalse } from "../actions";
 import { connect } from "react-redux";
+
+import { setFalse } from "../actions";
 
 const LaunchesCard = ({ launch, setFalse }) => {
   const {

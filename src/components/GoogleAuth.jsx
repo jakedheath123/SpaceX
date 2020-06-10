@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { signIn } from "../actions";
 import { Link } from "@reach/router";
+
+import { signIn } from "../actions";
 
 class GoogleAuth extends Component {
   componentDidMount() {
