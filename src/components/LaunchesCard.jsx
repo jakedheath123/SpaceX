@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { setFalse } from "../actions";
+import { connect } from "react-redux";
 
-const LaunchesCard = ({ launch }) => {
+const LaunchesCard = ({ launch, setFalse }) => {
   const {
     flight_number,
     mission_name,
@@ -23,10 +25,14 @@ const LaunchesCard = ({ launch }) => {
       </h1>
 
       <Link to={`/launches/${flight_number}`}>
-        <button className="ui secondary button">Launch Details</button>
+        <button onClick={setFalse} className="ui secondary button">
+          Launch Details
+        </button>
       </Link>
     </li>
   );
 };
 
-export default LaunchesCard;
+export default connect(null, {
+  setFalse
+})(LaunchesCard);
