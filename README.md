@@ -5,7 +5,7 @@
  An application on the information, news and data of the current and past history of SpaceX missions. The purpose of this application is to incorporate new technology learnt to solidify understanding.
  
  Current tech stack:
- - React(hooks)
+ - React
  - Redux
  - Axios
  
