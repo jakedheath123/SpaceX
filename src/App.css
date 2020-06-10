@@ -130,7 +130,7 @@ body {
   text-align: center;
 }
 
-.header,
+/* .header,
 .content-1,
 .content-2,
 .content-3,
@@ -138,8 +138,8 @@ body {
 .box-1,
 .box-2,
 .footer {
-  /* border: 1px white solid; */
-}
+  /* border: 1px white solid; 
+} */
 
 .container-about {
   display: grid;
@@ -179,11 +179,22 @@ body {
   margin-right: 5%;
 }
 
+.links p {
+  display: flex;
+  color: white;
+  margin: 1rem;
+}
+
 .about-links {
   grid-area: about-links;
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
+}
+
+.about-links p {
+  margin: 1rem;
+  color: white;
 }
 
 .key {

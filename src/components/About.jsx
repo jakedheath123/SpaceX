@@ -37,12 +37,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
     <main className="container-about">
       <div className="about-links">
         <Link to="/home">
-          <p
-            className="hvr-underline-from-left"
-            style={{ margin: 10, color: "white" }}
-          >
-            Back
-          </p>
+          <p className="hvr-underline-from-left">Back</p>
         </Link>
       </div>
 
