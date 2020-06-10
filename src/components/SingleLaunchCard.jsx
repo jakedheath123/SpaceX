@@ -1,16 +1,11 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
-import { getSingleLaunch, setFalse } from "../actions";
+import { getSingleLaunch } from "../actions";
 import Loader from "./Loader";
 import ViewToggler from "./ViewToggler";
 import { Link } from "@reach/router";
 
-const SingleLaunchCard = ({
-  getSingleLaunch,
-  flight_number,
-  oneFlight,
-  setFalse
-}) => {
+const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   useEffect(() => {
     getSingleLaunch(flight_number);
   }, [flight_number]);
@@ -37,7 +32,6 @@ const SingleLaunchCard = ({
     <main>
       <Link to="/home">
         <p
-          onClick={setFalse}
           className="hvr-underline-from-left"
           style={{ margin: 10, color: "white" }}
         >
@@ -100,6 +94,5 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  getSingleLaunch,
-  setFalse
+  getSingleLaunch
 })(SingleLaunchCard);
