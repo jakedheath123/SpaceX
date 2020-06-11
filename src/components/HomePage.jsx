@@ -16,8 +16,10 @@ const HomePage = ({ getLaunches, launches }) => {
     if (!launches.length) return <Loader />;
     return (
       <main className="container-main">
+        <div className="main-box1">
+          <img src={logo} alt="spaceX logo" className="ui small image" />
+        </div>
         <div className="links">
-          {/* <img src={logo} alt="spaceX logo" className="ui small image" /> */}
           <Link to="/about">
             <p className="hvr-underline-from-left">About</p>
           </Link>

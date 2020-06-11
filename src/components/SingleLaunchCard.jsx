@@ -30,60 +30,67 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   const { rocket_name, rocket_type } = rocket;
   // const { time, reason } = launch_failure_details;
   return (
-    <main>
-      <Link to="/home">
-        <p
-          className="hvr-underline-from-left"
-          style={{ margin: 10, color: "white" }}
-        >
-          Back
-        </p>
-      </Link>
-      <h1>{mission_name}</h1>
-      <img src={mission_patch_small} alt="Mission Patch" />
-      <p>{details ? `Mission Details: ${details}` : null}</p>
-      <table className="ui celled inverted selectable table">
-        <thead className="">
-          <tr className="">
-            <th className="">Launch Date</th>
-            <th className="">Rocket Name</th>
-            <th className="">Rocket Type</th>
-            <th className="">Article Link</th>
-            <th className="">Video Link</th>
-          </tr>
-        </thead>
-        <tbody className="">
-          <tr className="">
-            <td className="">{launch_date_local}</td>
-            <td className="">{rocket_name}</td>
-            <td className="">{rocket_type}</td>
-            <td className="">
-              <a href={article_link}>Space News</a>
-            </td>
-            <td className="">
-              <a href={video_link}>Youtube</a>
-            </td>
-          </tr>
-          <tr className=""></tr>
-        </tbody>
-      </table>
-      <ViewToggler id={flight_number}>
-        <br></br>
-        <br></br>
-        {!flickr_images.length ? "No images" : null}
-        {flickr_images.map(image => {
-          return (
-            <img
-              key={image}
-              src={image}
-              alt="Rocket "
-              className="ui medium spaced image"
-            />
-          );
-        })}
-        <br></br>
-        <br></br>
-      </ViewToggler>
+    <main className="container-singleLaunchCard">
+      <div className="singleLaunchCard-nav">
+        <Link to="/home">
+          <p
+            className="hvr-underline-from-left"
+            style={{ margin: 10, color: "white" }}
+          >
+            Back
+          </p>
+        </Link>
+      </div>
+      <div className="singleLaunchCard-box1">
+        <h1>{mission_name}</h1>
+        <img src={mission_patch_small} alt="Mission Patch" />
+        <p>{details ? `Mission Details: ${details}` : null}</p>
+      </div>
+      <div className="singleLaunchCard-box2">
+        <table className="ui celled inverted selectable table">
+          <thead className="">
+            <tr className="">
+              <th className="">Launch Date</th>
+              <th className="">Rocket Name</th>
+              <th className="">Rocket Type</th>
+              <th className="">Article Link</th>
+              <th className="">Video Link</th>
+            </tr>
+          </thead>
+          <tbody className="">
+            <tr className="">
+              <td className="">{launch_date_local}</td>
+              <td className="">{rocket_name}</td>
+              <td className="">{rocket_type}</td>
+              <td className="">
+                <a href={article_link}>Space News</a>
+              </td>
+              <td className="">
+                <a href={video_link}>Youtube</a>
+              </td>
+            </tr>
+            <tr className=""></tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="singleLaunchCard-box3">
+        <ViewToggler>
+          <br></br>
+          <br></br>
+          {!flickr_images.length ? "No images" : null}
+          {flickr_images.map(image => {
+            return (
+              <div key={image}>
+                <img
+                  src={image}
+                  alt="Rocket "
+                  // className="ui medium spaced image"
+                />
+              </div>
+            );
+          })}
+        </ViewToggler>
+      </div>
     </main>
   );
 };

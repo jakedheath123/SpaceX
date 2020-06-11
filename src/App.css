@@ -156,6 +156,7 @@ body {
 .container-main {
   display: grid;
   grid-template-areas:
+    "main-box1 main-box1 main-box1"
     "links links links"
     "head head head"
     "key key key"
@@ -170,6 +171,13 @@ body {
 .head,
 .list {
   /* border: 1px white solid; */
+}
+
+.main-box1 {
+  grid-area: main-box1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
 }
 
 .links {
@@ -259,6 +267,42 @@ body {
   grid-area: image-signIn;
 }
 
+.container-singleLaunchCard {
+  display: grid;
+  grid-template-areas:
+    "singleLaunchCard-nav singleLaunchCard-nav singleLaunchCard-nav "
+    "singleLaunchCard-box1 singleLaunchCard-box1 singleLaunchCard-box1 "
+    "singleLaunchCard-box2 singleLaunchCard-box2 singleLaunchCard-box2 "
+    "singleLaunchCard-box3 singleLaunchCard-box3 singleLaunchCard-box3 ";
+  grid-gap: 1rem;
+  margin: 3rem;
+}
+
+.singleLaunchCard-nav {
+  grid-area: singleLaunchCard-nav;
+
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.singleLaunchCard-box1 {
+  grid-area: singleLaunchCard-box1;
+}
+
+.singleLaunchCard-box2 {
+  grid-area: singleLaunchCard-box2;
+}
+
+.singleLaunchCard-box3 {
+  grid-area: singleLaunchCard-box3;
+}
+
+.singleLaunchCard-box3 img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
 @media (max-width: 500px) {
   .container-about {
     grid-template-areas:
@@ -310,5 +354,13 @@ body {
     display: flex;
     justify-content: center;
     margin: 0;
+  }
+  .singleLaunchCard-box3 img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .main-box1 {
+    justify-content: center;
+    margin-right: 0%;
   }
 }
