@@ -13,14 +13,7 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
 
   if (!oneFlight) return <Loader />;
 
-  const {
-    mission_name,
-    details,
-    launch_date_local,
-    links,
-    rocket
-    // launch_failure_details
-  } = oneFlight;
+  const { mission_name, details, launch_date_local, links, rocket } = oneFlight;
   const {
     mission_patch_small,
     article_link,
@@ -28,17 +21,9 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
     flickr_images
   } = links;
   const { rocket_name, rocket_type } = rocket;
-  // const { time, reason } = launch_failure_details;
+
   return (
     <main className="container-singleLaunchCard">
-      {/* <div className="singleLaunchCard-logo">
-        <img src={logo} alt="spaceX logo" className="ui small image" />
-      </div>
-      <div className="singleLaunchCard-nav">
-        <Link to="/launches">
-          <p className="hvr-underline-from-left">Back</p>
-        </Link>
-      </div> */}
       <div className="singleLaunchCard-box1">
         <div>
           <Link to="/launches">

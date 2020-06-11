@@ -14,14 +14,6 @@ const Launches = ({ getLaunches, launches }) => {
     if (!launches.length) return <Loader />;
     return (
       <main className="container-main">
-        {/* <div className="main-box1">
-          <img src={logo} alt="spaceX logo" className="ui small image" />
-        </div>
-        <div className="links">
-          <Link to="/home">
-            <p className="hvr-underline-from-left">Back</p>
-          </Link>
-        </div> */}
         <div className="key">
           <h4>
             Key : success{" "}
