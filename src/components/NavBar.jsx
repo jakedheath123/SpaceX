@@ -19,9 +19,9 @@ const NavBar = () => {
         <Link to="/launches">
           <p className="hvr-underline-from-left">Launches</p>
         </Link>
-        <Link to="/">
+        {/* <Link to="/">
           <p className="hvr-underline-from-left">Sign Out</p>
-        </Link>
+        </Link> */}
       </div>
     </nav>
   );
