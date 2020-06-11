@@ -135,8 +135,7 @@ body {
   grid-template-areas:
     "header header header  "
     "content-1 content-2 content-3 "
-    "box-1 box-2 sidebar "
-    "footer footer footer ";
+    "box-1 box-2 sidebar ";
   grid-gap: 1rem;
   margin: 3rem;
 }
@@ -267,8 +266,7 @@ body {
       "content-2 "
       "content-3"
       "box-1"
-      "box-2"
-      "footer";
+      "box-2";
   }
 
   .main-list {

@@ -97,7 +97,6 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
         <p>{twitter}</p>
         <p>{elon_twitter}</p>
       </div>
-      <footer className="footer">FOOTER &copy; 2020</footer>
     </main>
   );
 };
