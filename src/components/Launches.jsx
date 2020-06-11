@@ -22,7 +22,7 @@ const Launches = ({ getLaunches, launches }) => {
           </h4>
         </div>
         <div className="head">
-          <h2>Missions</h2>
+          <h2>Launches</h2>
         </div>
         <div className="list">
           <ul>
