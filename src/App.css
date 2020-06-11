@@ -173,12 +173,12 @@ body {
   margin: 3rem 3rem 0rem 3rem;
 }
 
-.main-box1 {
+/* .main-box1 {
   grid-area: main-box1;
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
-}
+} */
 
 /* .main-box1 img {
   max-width: 75%;
@@ -190,6 +190,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
+  align-items: center;
 }
 
 .links p {
