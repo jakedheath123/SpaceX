@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-import logo from "../images/logo.png";
+import logo2 from "../images/logo2.jpg";
 
 const NavBar = () => {
   return (
     <nav className="container-main">
       <div className="main-box1">
-        <img src={logo} alt="spaceX logo" className="ui small image" />
+        <img src={logo2} alt="spaceX logo" className="ui small image" />
       </div>
       <div className="links">
         <Link to="/">
