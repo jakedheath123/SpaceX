@@ -3,18 +3,20 @@ import { Router } from "@reach/router";
 
 import "./App.css";
 import Loader from "./components/Loader";
-import NavBar from "./components/NavBar";
-
-// const SignInPage = lazy(() => import("./components/SignInPage"));
 const HomePage = lazy(() => import("./components/HomePage"));
 const SingleLaunchCard = lazy(() => import("./components/SingleLaunchCard"));
 const About = lazy(() => import("./components/About"));
 const Launches = lazy(() => import("./components/Launches"));
+const NavBar = lazy(() => import("./components/NavBar"));
+// const SignInPage = lazy(() => import("./components/SignInPage"));
 
 function App() {
   return (
     <div className="app">
-      <NavBar />
+      <Suspense fallback={<Loader />}>
+        <NavBar />
+      </Suspense>
+
       <Suspense fallback={<Loader />}>
         <Router>
           {/* <SignInPage path="/" /> */}
