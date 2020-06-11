@@ -4,7 +4,6 @@ import { Router } from "@reach/router";
 import "./App.css";
 import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 
 // const SignInPage = lazy(() => import("./components/SignInPage"));
 const HomePage = lazy(() => import("./components/HomePage"));
@@ -25,7 +24,6 @@ function App() {
           <About path="/about" />
         </Router>
       </Suspense>
-      <Footer />
     </div>
   );
 }
