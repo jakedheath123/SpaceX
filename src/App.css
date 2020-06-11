@@ -130,35 +130,15 @@ body {
   text-align: center;
 }
 
-/* .header,
-.content-1,
-.content-2,
-.content-3,
-.sidebar,
-.box-1,
-.box-2,
-.footer {
-  /* border: 1px white solid; 
-} */
-
 .container-about {
   display: grid;
   grid-template-areas:
-    "about-box1 about-box1 about-box1"
-    "about-links about-links about-links"
     "header header header  "
     "content-1 content-2 content-3 "
     "box-1 box-2 sidebar "
     "footer footer footer ";
   grid-gap: 1rem;
   margin: 3rem;
-}
-
-.about-box1 {
-  grid-area: about-box1;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
 }
 
 .container-main {
@@ -170,15 +150,7 @@ body {
     "key key key"
     "list list list ";
   grid-gap: 1rem;
-  margin: 3rem;
-}
-
-.key,
-.links,
-.about-links,
-.head,
-.list {
-  /* border: 1px white solid; */
+  margin: 3rem 3rem 0rem 3rem;
 }
 
 .main-box1 {
@@ -199,18 +171,6 @@ body {
   display: flex;
   color: white;
   margin: 1rem;
-}
-
-.about-links {
-  grid-area: about-links;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-}
-
-.about-links p {
-  margin: 1rem;
-  color: white;
 }
 
 .key {
@@ -239,7 +199,6 @@ body {
 
 .main-list {
   display: flex;
-  /* border: 1px white solid; */
   align-items: center;
   justify-content: space-evenly;
   margin: 2rem 2rem 3rem 2rem;
@@ -259,51 +218,27 @@ body {
 }
 
 .welcome {
-  /* border: 1px white solid; */
   grid-area: welcome;
   justify-content: center;
 }
 
 .logo {
-  /* border: 1px white solid; */
   grid-area: logo;
   display: flex;
 }
 
 .image-signIn {
-  border: 1px white solid;
   grid-area: image-signIn;
 }
 
 .container-singleLaunchCard {
   display: grid;
   grid-template-areas:
-    "singleLaunchCard-logo singleLaunchCard-logo singleLaunchCard-logo"
-    "singleLaunchCard-nav singleLaunchCard-nav singleLaunchCard-nav "
     "singleLaunchCard-box1 singleLaunchCard-box1 singleLaunchCard-box1 "
     "singleLaunchCard-box2 singleLaunchCard-box2 singleLaunchCard-box2 "
     "singleLaunchCard-box3 singleLaunchCard-box3 singleLaunchCard-box3 ";
   grid-gap: 1rem;
   margin: 3rem;
-}
-
-.singleLaunchCard-logo {
-  grid-area: singleLaunchCard-logo;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-}
-
-.singleLaunchCard-nav {
-  grid-area: singleLaunchCard-nav;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-}
-
-.singleLaunchCard-nav p {
-  color: white;
-  margin: 1rem;
 }
 
 .singleLaunchCard-box1 {
@@ -319,15 +254,13 @@ body {
 }
 
 .singleLaunchCard-box3 img {
-  max-width: 60%;
-  max-height: 60%;
+  max-width: 50%;
+  max-height: 50%;
 }
 
 @media (max-width: 500px) {
   .container-about {
     grid-template-areas:
-      "about-box1"
-      "about-links"
       "header  "
       "sidebar "
       "content-1  "
@@ -337,26 +270,33 @@ body {
       "box-2"
       "footer";
   }
+
   .main-list {
     flex-direction: column;
   }
+
   .main-list h1 {
     margin-right: 0%;
   }
+
   .key {
     margin: 0;
     justify-content: center;
   }
+
   .rocket-image {
     width: 100%;
   }
+
   .logo {
     justify-content: center;
   }
+
   .logo-signIn {
     max-width: 50%;
     max-height: auto;
   }
+
   .head {
     grid-area: head;
     text-align: center;
@@ -364,36 +304,47 @@ body {
     justify-content: center;
     margin-left: 0%;
   }
-  .about-links {
-    grid-area: about-links;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-  }
+
   .links {
     grid-area: links;
     display: flex;
     justify-content: center;
     margin: 0;
   }
+
+  .links p {
+    font-size: 13px;
+  }
+
   .singleLaunchCard-box3 img {
     max-width: 100%;
     max-height: 100%;
   }
+
   .main-box1 {
     justify-content: center;
     margin-right: 0%;
   }
+
   .singleLaunchCard-nav {
     justify-content: center;
     margin-right: 0%;
   }
-  .about-box1 {
-    justify-content: center;
-    margin: 0%;
-  }
+
   .singleLaunchCard-logo {
     justify-content: center;
     margin: 0%;
+  }
+
+  .container-main {
+    margin: 3rem 0rem 0rem 0rem;
+  }
+
+  .container-singleLaunchCard {
+    grid-template-areas:
+      "singleLaunchCard-box1 "
+      "singleLaunchCard-box2 "
+      "singleLaunchCard-box3 ";
+    justify-content: center;
   }
 }

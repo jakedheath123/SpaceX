@@ -4,7 +4,6 @@ import { Link } from "@reach/router";
 
 import { getSingleLaunch } from "../actions";
 import Loader from "./Loader";
-import logo from "../images/logo.png";
 import ViewToggler from "./ViewToggler";
 
 const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
@@ -32,15 +31,20 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   // const { time, reason } = launch_failure_details;
   return (
     <main className="container-singleLaunchCard">
-      <div className="singleLaunchCard-logo">
+      {/* <div className="singleLaunchCard-logo">
         <img src={logo} alt="spaceX logo" className="ui small image" />
       </div>
       <div className="singleLaunchCard-nav">
-        <Link to="/home">
+        <Link to="/launches">
           <p className="hvr-underline-from-left">Back</p>
         </Link>
-      </div>
+      </div> */}
       <div className="singleLaunchCard-box1">
+        <div>
+          <Link to="/launches">
+            <button className="ui button">Back</button>
+          </Link>
+        </div>
         <h1>{mission_name}</h1>
         <img src={mission_patch_small} alt="Mission Patch" />
         <p>{details ? `Mission Details: ${details}` : null}</p>
@@ -80,11 +84,7 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
           {flickr_images.map(image => {
             return (
               <div key={image}>
-                <img
-                  src={image}
-                  alt="Rocket "
-                  // className="ui medium spaced image"
-                />
+                <img src={image} alt="Rocket " />
               </div>
             );
           })}

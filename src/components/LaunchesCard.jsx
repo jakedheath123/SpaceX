@@ -5,13 +5,7 @@ import { connect } from "react-redux";
 import { setFalse } from "../actions";
 
 const LaunchesCard = ({ launch, setFalse }) => {
-  const {
-    flight_number,
-    mission_name,
-    links,
-    launch_year,
-    launch_success
-  } = launch;
+  const { flight_number, mission_name, links, launch_success } = launch;
 
   return (
     <li className="main-list">
