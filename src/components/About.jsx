@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "@reach/router";
 import { connect } from "react-redux";
 
+import logo from "../images/logo.png";
 import elonImage from "../images/elon.jpg";
 import gwynneShotwellImage from "../images/gwynneShotwell.png";
 import tomMuellerImage from "../images/tomMueller.jpg";
@@ -35,6 +36,9 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
 
   return (
     <main className="container-about">
+      <div className="about-box1">
+        <img src={logo} alt="spaceX logo" className="ui small image" />
+      </div>
       <div className="about-links">
         <Link to="/home">
           <p className="hvr-underline-from-left">Back</p>

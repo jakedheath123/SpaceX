@@ -144,6 +144,7 @@ body {
 .container-about {
   display: grid;
   grid-template-areas:
+    "about-box1 about-box1 about-box1"
     "about-links about-links about-links"
     "header header header  "
     "content-1 content-2 content-3 "
@@ -151,6 +152,13 @@ body {
     "footer footer footer ";
   grid-gap: 1rem;
   margin: 3rem;
+}
+
+.about-box1 {
+  grid-area: about-box1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
 }
 
 .container-main {
@@ -270,6 +278,7 @@ body {
 .container-singleLaunchCard {
   display: grid;
   grid-template-areas:
+    "singleLaunchCard-logo singleLaunchCard-logo singleLaunchCard-logo"
     "singleLaunchCard-nav singleLaunchCard-nav singleLaunchCard-nav "
     "singleLaunchCard-box1 singleLaunchCard-box1 singleLaunchCard-box1 "
     "singleLaunchCard-box2 singleLaunchCard-box2 singleLaunchCard-box2 "
@@ -278,12 +287,23 @@ body {
   margin: 3rem;
 }
 
-.singleLaunchCard-nav {
-  grid-area: singleLaunchCard-nav;
-
+.singleLaunchCard-logo {
+  grid-area: singleLaunchCard-logo;
   display: flex;
   justify-content: flex-end;
   margin-right: 5%;
+}
+
+.singleLaunchCard-nav {
+  grid-area: singleLaunchCard-nav;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5%;
+}
+
+.singleLaunchCard-nav p {
+  color: white;
+  margin: 1rem;
 }
 
 .singleLaunchCard-box1 {
@@ -306,6 +326,7 @@ body {
 @media (max-width: 500px) {
   .container-about {
     grid-template-areas:
+      "about-box1"
       "about-links"
       "header  "
       "sidebar "
@@ -362,5 +383,17 @@ body {
   .main-box1 {
     justify-content: center;
     margin-right: 0%;
+  }
+  .singleLaunchCard-nav {
+    justify-content: center;
+    margin-right: 0%;
+  }
+  .about-box1 {
+    justify-content: center;
+    margin: 0%;
+  }
+  .singleLaunchCard-logo {
+    justify-content: center;
+    margin: 0%;
   }
 }

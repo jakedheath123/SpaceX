@@ -4,6 +4,7 @@ import { Link } from "@reach/router";
 
 import { getSingleLaunch } from "../actions";
 import Loader from "./Loader";
+import logo from "../images/logo.png";
 import ViewToggler from "./ViewToggler";
 
 const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
@@ -31,14 +32,12 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   // const { time, reason } = launch_failure_details;
   return (
     <main className="container-singleLaunchCard">
+      <div className="singleLaunchCard-logo">
+        <img src={logo} alt="spaceX logo" className="ui small image" />
+      </div>
       <div className="singleLaunchCard-nav">
         <Link to="/home">
-          <p
-            className="hvr-underline-from-left"
-            style={{ margin: 10, color: "white" }}
-          >
-            Back
-          </p>
+          <p className="hvr-underline-from-left">Back</p>
         </Link>
       </div>
       <div className="singleLaunchCard-box1">
