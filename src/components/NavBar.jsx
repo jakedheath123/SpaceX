@@ -10,7 +10,7 @@ const NavBar = () => {
         <img src={logo} alt="spaceX logo" className="ui small image" />
       </div>
       <div className="links">
-        <Link to="/home">
+        <Link to="/">
           <p className="hvr-underline-from-left">Home</p>
         </Link>
         <Link to="/about">

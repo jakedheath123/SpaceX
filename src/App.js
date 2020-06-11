@@ -5,7 +5,7 @@ import "./App.css";
 import Loader from "./components/Loader";
 import NavBar from "./components/NavBar";
 
-const SignInPage = lazy(() => import("./components/SignInPage"));
+// const SignInPage = lazy(() => import("./components/SignInPage"));
 const HomePage = lazy(() => import("./components/HomePage"));
 const SingleLaunchCard = lazy(() => import("./components/SingleLaunchCard"));
 const About = lazy(() => import("./components/About"));
@@ -17,8 +17,8 @@ function App() {
       <NavBar />
       <Suspense fallback={<Loader />}>
         <Router>
-          <SignInPage path="/" />
-          <HomePage path="/home" />
+          {/* <SignInPage path="/" /> */}
+          <HomePage path="/" />
           <Launches path="/launches" />
           <SingleLaunchCard path="/launches/:flight_number" />
           <About path="/about" />
