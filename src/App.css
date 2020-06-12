@@ -304,7 +304,7 @@ body {
 
 .home-box2 {
   grid-area: home-box2;
-  margin: 3rem 15rem 3rem 15rem;
+  margin: 3rem;
 }
 
 .home-box1 h1 {
