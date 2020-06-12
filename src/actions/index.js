@@ -54,7 +54,7 @@ export const setFalse = () => {
   };
 };
 
-export const setHasErrored = () => {
+export const setErrorBoundary = () => {
   return {
     type: HAS_ERRORED
   };
