@@ -6,7 +6,7 @@ import {
   IS_VISIBLE,
   SET_FALSE,
   GET_COMPANY_INFO,
-  HAS_ERRORED
+  SET_ERROR_BOUNDARY
 } from "./types";
 
 export const getLaunches = () => dispatch =>
@@ -56,6 +56,6 @@ export const setFalse = () => {
 
 export const setErrorBoundary = () => {
   return {
-    type: HAS_ERRORED
+    type: SET_ERROR_BOUNDARY
   };
 };
