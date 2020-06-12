@@ -1,18 +1,20 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-
-import { setErrorBoundary } from "../actions";
 
 class ErrorBoundary extends Component {
+  state = {
+    hasErrored: false
+  };
+
+  static getDerivedStateFromError(error) {
+    return {
+      hasErrored: true
+    };
+  }
+
   render() {
-    return <div></div>;
+    if (this.state.hasErrored) return <div>An Error Has Occured</div>;
+    return this.props.children;
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    hasErrored: state.errorBoundary.hasErrored
-  };
-};
-
-export default connect(mapStateToProps)(ErrorBoundary);
+export default ErrorBoundary;
