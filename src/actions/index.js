@@ -5,7 +5,8 @@ import {
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
   SET_FALSE,
-  GET_COMPANY_INFO
+  GET_COMPANY_INFO,
+  SET_TRUE
 } from "./types";
 
 export const getLaunches = () => dispatch =>
@@ -55,6 +56,6 @@ export const setFalse = () => {
 
 export const setHasErrored = () => {
   return {
-    type: "SET_TRUE"
+    type: SET_TRUE
   };
 };
