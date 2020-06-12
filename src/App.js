@@ -3,6 +3,7 @@ import { Router } from "@reach/router";
 
 import "./App.css";
 import Loader from "./components/Loader";
+import ErrorBoundary from "./components/ErrorBoundary";
 const HomePage = lazy(() => import("./components/HomePage"));
 const SingleLaunchCard = lazy(() => import("./components/SingleLaunchCard"));
 const About = lazy(() => import("./components/About"));
@@ -13,19 +14,21 @@ const NavBar = lazy(() => import("./components/NavBar"));
 function App() {
   return (
     <div className="app">
-      <Suspense fallback={<Loader />}>
-        <NavBar />
-      </Suspense>
+      <ErrorBoundary>
+        <Suspense fallback={<Loader />}>
+          <NavBar />
+        </Suspense>
 
-      <Suspense fallback={<Loader />}>
-        <Router>
-          {/* <SignInPage path="/" /> */}
-          <HomePage path="/" />
-          <Launches path="/launches" />
-          <SingleLaunchCard path="/launches/:flight_number" />
-          <About path="/about" />
-        </Router>
-      </Suspense>
+        <Suspense fallback={<Loader />}>
+          <Router>
+            {/* <SignInPage path="/" /> */}
+            <HomePage path="/" />
+            <Launches path="/launches" />
+            <SingleLaunchCard path="/launches/:flight_number" />
+            <About path="/about" />
+          </Router>
+        </Suspense>
+      </ErrorBoundary>
     </div>
   );
 }
