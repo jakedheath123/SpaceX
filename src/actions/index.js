@@ -52,3 +52,9 @@ export const setFalse = () => {
     type: SET_FALSE
   };
 };
+
+export const setHasErrored = () => {
+  return {
+    type: "SET_TRUE"
+  };
+};
