@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+
+import { setErrorBoundary } from "../actions";
 
 class ErrorBoundary extends Component {
   render() {
@@ -6,4 +9,10 @@ class ErrorBoundary extends Component {
   }
 }
 
-export default ErrorBoundary;
+const mapStateToProps = state => {
+  return {
+    hasErrored: state.errorBoundary.hasErrored
+  };
+};
+
+export default connect(mapStateToProps)(ErrorBoundary);
