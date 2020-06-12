@@ -34,15 +34,6 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
 
   return (
     <main className="container-about">
-      {/* <div className="about-box1">
-        <img src={logo} alt="spaceX logo" className="ui small image" />
-      </div>
-      <div className="about-links">
-        <Link to="/home">
-          <p className="hvr-underline-from-left">Back</p>
-        </Link>
-      </div> */}
-
       <div className="content-1">
         <h2>CEO and CTO</h2>
         <p>{ceo}</p>
