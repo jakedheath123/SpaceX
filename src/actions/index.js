@@ -5,8 +5,7 @@ import {
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
   SET_FALSE,
-  GET_COMPANY_INFO,
-  SET_ERROR_BOUNDARY
+  GET_COMPANY_INFO
 } from "./types";
 
 export const getLaunches = () => dispatch =>
@@ -51,11 +50,5 @@ export const toggleVisible = () => {
 export const setFalse = () => {
   return {
     type: SET_FALSE
-  };
-};
-
-export const setErrorBoundary = () => {
-  return {
-    type: SET_ERROR_BOUNDARY
   };
 };
