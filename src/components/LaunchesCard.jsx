@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "@reach/router";
 import { connect } from "react-redux";
 
-import { setFalse } from "../actions";
+import { setTogglerFalse } from "../actions";
 
-const LaunchesCard = ({ launch, setFalse }) => {
+const LaunchesCard = ({ launch, setTogglerFalse }) => {
   const { flight_number, mission_name, links, launch_success } = launch;
 
   return (
@@ -20,7 +20,7 @@ const LaunchesCard = ({ launch, setFalse }) => {
       </h1>
 
       <Link to={`/launches/${flight_number}`}>
-        <button onClick={setFalse} className="ui secondary button">
+        <button onClick={setTogglerFalse} className="ui secondary button">
           Launch Details
         </button>
       </Link>
@@ -29,5 +29,5 @@ const LaunchesCard = ({ launch, setFalse }) => {
 };
 
 export default connect(null, {
-  setFalse
+  setTogglerFalse
 })(LaunchesCard);

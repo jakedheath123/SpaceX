@@ -4,7 +4,7 @@ import {
   SIGN_IN,
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
-  SET_FALSE,
+  SET_TOGGLER_FALSE,
   GET_COMPANY_INFO
 } from "./types";
 
@@ -47,8 +47,8 @@ export const toggleVisible = () => {
   };
 };
 
-export const setFalse = () => {
+export const setTogglerFalse = () => {
   return {
-    type: SET_FALSE
+    type: SET_TOGGLER_FALSE
   };
 };
