@@ -1,4 +1,4 @@
-# SpaceX App
+# SpaceX
 
 ## Overview
 
