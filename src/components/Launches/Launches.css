@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "header header header"
+    "keys keys keys"
+    "launches launches launches";
+}
+
+.keys {
+  grid-area: keys;
+}
+
+.header {
+  grid-area: header;
+}
+
+.launches {
+  grid-area: launches;
+}
+
+.launches ul {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.launches li {
+  display: flex;
+}
