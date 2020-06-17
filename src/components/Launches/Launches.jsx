@@ -13,18 +13,18 @@ const Launches = ({ getLaunches, launches }) => {
   const renderLaunchesList = () => {
     if (!launches.length) return <Loader />;
     return (
-      <main className="container-main">
-        <div className="key">
+      <main className="container">
+        <div className="keys">
           <h4>
             Key : success{" "}
             <i className="square icon" style={{ color: "green" }} /> failure{" "}
             <i className="square icon" style={{ color: "red" }} />{" "}
           </h4>
         </div>
-        <div className="head">
+        <div className="header">
           <h1>Launches</h1>
         </div>
-        <div className="list">
+        <div className="launches">
           <ul>
             {launches.map(launch => {
               return (
