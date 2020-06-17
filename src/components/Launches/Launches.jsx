@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
+import "./Launches.css";
 import { getLaunches } from "../../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
