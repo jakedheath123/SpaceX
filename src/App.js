@@ -2,13 +2,15 @@ import React, { lazy, Suspense } from "react";
 import { Router } from "@reach/router";
 
 import "./App.css";
-import Loader from "./components/Loader";
+import Loader from "./components/Loader/Loader";
 import ErrorBoundary from "./error-boundary/ErrorBoundary";
-const HomePage = lazy(() => import("./components/HomePage"));
-const SingleLaunchCard = lazy(() => import("./components/SingleLaunchCard"));
+const HomePage = lazy(() => import("./components/Home/Home"));
+const SingleLaunchCard = lazy(() =>
+  import("./components/SingleLaunch/SingleLaunch")
+);
 const About = lazy(() => import("./components/About"));
-const Launches = lazy(() => import("./components/Launches"));
-const NavBar = lazy(() => import("./components/NavBar"));
+const Launches = lazy(() => import("./components/Launches/Launches"));
+const NavBar = lazy(() => import("./components/NavBar/NavBar"));
 
 function App() {
   return (

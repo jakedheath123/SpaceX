@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "@reach/router";
 import { connect } from "react-redux";
 
-import { setTogglerFalse } from "../actions";
+import { setTogglerFalse } from "../../actions";
 
 const LaunchesCard = ({ launch, setTogglerFalse }) => {
   const { flight_number, mission_name, links, launch_success } = launch;

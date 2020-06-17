@@ -4,8 +4,8 @@ import { connect } from "react-redux";
 import elonImage from "../images/elon.jpg";
 import gwynneShotwellImage from "../images/gwynneShotwell.png";
 import tomMuellerImage from "../images/tomMueller.jpg";
-import { getCompanyInfo } from "../actions";
-import Loader from "./Loader";
+import { getCompanyInfo } from "../../actions";
+import Loader from "../Loader/Loader";
 
 const About = ({ getCompanyInfo, spaceXInfo }) => {
   useEffect(() => {

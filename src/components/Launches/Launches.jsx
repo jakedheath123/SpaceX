@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
-import { getLaunches } from "../actions";
+import { getLaunches } from "../../actions";
 import LaunchesCard from "./LaunchesCard";
-import Loader from "./Loader";
+import Loader from "../Loader/Loader";
 
 const Launches = ({ getLaunches, launches }) => {
   useEffect(() => {
