@@ -9,7 +9,6 @@ const SingleLaunchCard = lazy(() => import("./components/SingleLaunchCard"));
 const About = lazy(() => import("./components/About"));
 const Launches = lazy(() => import("./components/Launches"));
 const NavBar = lazy(() => import("./components/NavBar"));
-// const SignInPage = lazy(() => import("./components/SignInPage"));
 
 function App() {
   return (
@@ -18,7 +17,6 @@ function App() {
         <Suspense fallback={<Loader />}>
           <NavBar />
           <Router>
-            {/* <SignInPage path="/" /> */}
             <HomePage path="/" />
             <Launches path="/launches" />
             <SingleLaunchCard path="/launches/:flight_number" />
