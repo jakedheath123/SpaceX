@@ -4,11 +4,11 @@ import { Router } from "@reach/router";
 import "./App.css";
 import Loader from "./components/Loader/Loader";
 import ErrorBoundary from "./error-boundary/ErrorBoundary";
-const HomePage = lazy(() => import("./components/Home/Home"));
-const SingleLaunchCard = lazy(() =>
+const Home = lazy(() => import("./components/Home/Home"));
+const SingleLaunch = lazy(() =>
   import("./components/SingleLaunch/SingleLaunch")
 );
-const About = lazy(() => import("./components/About"));
+const About = lazy(() => import("./components/About/About"));
 const Launches = lazy(() => import("./components/Launches/Launches"));
 const NavBar = lazy(() => import("./components/NavBar/NavBar"));
 
@@ -19,9 +19,9 @@ function App() {
         <Suspense fallback={<Loader />}>
           <NavBar />
           <Router>
-            <HomePage path="/" />
+            <Home path="/" />
             <Launches path="/launches" />
-            <SingleLaunchCard path="/launches/:flight_number" />
+            <SingleLaunch path="/launches/:flight_number" />
             <About path="/about" />
           </Router>
         </Suspense>

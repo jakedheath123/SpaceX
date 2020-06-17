@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-import logo2 from "../images/logo2.jpg";
+import logo2 from "../../images/logo2.jpg";
 
 const NavBar = () => {
   return (

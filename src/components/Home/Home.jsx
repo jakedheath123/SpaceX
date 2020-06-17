@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-import starlink from "../images/starlink.jpg";
+import starlink from "../../images/starlink.jpg";
 
 const HomePage = () => {
   return (
