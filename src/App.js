@@ -17,9 +17,6 @@ function App() {
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
           <NavBar />
-        </Suspense>
-
-        <Suspense fallback={<Loader />}>
           <Router>
             {/* <SignInPage path="/" /> */}
             <HomePage path="/" />
