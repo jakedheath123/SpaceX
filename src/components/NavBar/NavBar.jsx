@@ -6,17 +6,17 @@ import logo from "../../images/logo.jpg";
 
 const NavBar = () => {
   return (
-    <nav className="container-main">
-      <div className="links">
+    <nav>
+      <div>
         <img src={logo} alt="spaceX logo" className="ui small image" />
         <Link to="/">
-          <p className="hvr-underline-from-left">Home</p>
+          <p>Home</p>
         </Link>
         <Link to="/about">
-          <p className="hvr-underline-from-left">About</p>
+          <p>About</p>
         </Link>
         <Link to="/launches">
-          <p className="hvr-underline-from-left">Launches</p>
+          <p>Launches</p>
         </Link>
       </div>
     </nav>
