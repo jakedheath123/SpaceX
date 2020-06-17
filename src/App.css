@@ -1,7 +1,9 @@
-/* .app {
-  text-align: center;
+.app {
+  background-color: black;
+  color: white;
 }
 
+/*
 ul {
   padding: 0;
 }
