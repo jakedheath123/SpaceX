@@ -1,7 +1,6 @@
 import spaceXDb from "../apis/spaceXDb";
 import {
   GET_LAUNCHES,
-  SIGN_IN,
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
   SET_TOGGLER_FALSE,
@@ -32,13 +31,6 @@ export const getCompanyInfo = () => dispatch => {
       payload: response.data
     });
   });
-};
-
-export const signIn = userId => {
-  return {
-    type: SIGN_IN,
-    payload: userId
-  };
 };
 
 export const toggleVisible = () => {
