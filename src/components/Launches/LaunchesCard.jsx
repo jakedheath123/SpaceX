@@ -8,7 +8,7 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
   const { flight_number, mission_name, links, launch_success } = launch;
 
   return (
-    <li className="main-list">
+    <li>
       <img
         src={links.mission_patch}
         alt="Launch Logo"
