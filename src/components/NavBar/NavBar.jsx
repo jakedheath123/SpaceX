@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
+import "./NavBar.css";
 import logo from "../../images/logo.jpg";
 
 const NavBar = () => {
