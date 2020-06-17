@@ -1,4 +1,4 @@
-.app {
+/* .app {
   text-align: center;
 }
 
@@ -79,7 +79,7 @@ body {
   right: 0;
 }
 
-/* Border Fade */
+
 .hvr-border-fade {
   display: inline-block;
   vertical-align: middle;
@@ -91,13 +91,13 @@ body {
   -webkit-transition-property: box-shadow;
   transition-property: box-shadow;
   box-shadow: inset 0 0 0 4px #e1e1e1, 0 0 1px rgba(0, 0, 0, 0);
-  /* Hack to improve aliasing on mobile/tablet devices */
+ 
 }
 .hvr-border-fade:hover,
 .hvr-border-fade:focus,
 .hvr-border-fade:active {
   box-shadow: inset 0 0 0 4px black, 0 0 1px rgba(0, 0, 0, 0);
-  /* Hack to improve aliasing on mobile/tablet devices */
+ 
 }
 
 .footer {
@@ -173,17 +173,7 @@ body {
   margin: 3rem 3rem 0rem 3rem;
 }
 
-/* .main-box1 {
-  grid-area: main-box1;
-  display: flex;
-  justify-content: flex-end;
-  margin-right: 5%;
-} */
 
-/* .main-box1 img {
-  max-width: 75%;
-  max-height: 75%;
-} */
 
 .links {
   grid-area: links;
@@ -426,4 +416,4 @@ body {
     grid-area: home-box2;
     margin: 2rem;
   }
-}
+} */

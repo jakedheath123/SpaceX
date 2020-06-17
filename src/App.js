@@ -3,7 +3,7 @@ import { Router } from "@reach/router";
 
 import "./App.css";
 import Loader from "./components/Loader/Loader";
-import ErrorBoundary from "./ErrorBoundary/ErrorBoundary";
+import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 const Home = lazy(() => import("./components/Home/Home"));
 const SingleLaunch = lazy(() =>
   import("./components/SingleLaunch/SingleLaunch")
