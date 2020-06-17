@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-import starlink from "../../images/starlink.jpg";
+import starLink from "../../images/starLink.jpg";
 
 const HomePage = () => {
   return (
@@ -14,7 +14,7 @@ const HomePage = () => {
           </Link>
         </div>
         <div>
-          <img src={starlink} alt="rocket" />
+          <img src={starLink} alt="rocket" />
         </div>
         <div>
           <h1>Next Launch:</h1>
