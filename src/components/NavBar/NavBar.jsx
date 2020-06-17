@@ -6,8 +6,8 @@ import logo from "../../images/logo.jpg";
 
 const NavBar = () => {
   return (
-    <nav>
-      <div>
+    <nav className="container">
+      <div className="links">
         <img src={logo} alt="spaceX logo" className="ui small image" />
         <Link to="/">
           <p>Home</p>
