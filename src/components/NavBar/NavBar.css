@@ -9,4 +9,9 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 5rem;
+}
+
+.links p {
+  margin: 1rem;
 }
