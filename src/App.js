@@ -18,7 +18,7 @@ function App() {
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
           <NavBar />
-          <Router>
+          <Router primary={false}>
             <Home path="/" />
             <Launches path="/launches" />
             <SingleLaunch path="/launches/:flight_number" />
