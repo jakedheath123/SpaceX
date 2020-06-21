@@ -36,29 +36,17 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
       <section className="about-box1">
         <h2>CEO and CTO</h2>
         <p>{ceo}</p>
-        <img
-          src={elonImage}
-          alt="Elon Musk avatar"
-          // className="ui medium image"
-        />
+        <img src={elonImage} alt="Elon Musk avatar" />
       </section>
       <section className="about-box2">
         <h2>COO</h2>
         <p>{coo}</p>
-        <img
-          src={gwynneShotwellImage}
-          alt="Gwynne Shotwell avatar"
-          // className="ui medium image"
-        />
+        <img src={gwynneShotwellImage} alt="Gwynne Shotwell avatar" />
       </section>
       <section className="about-box3">
         <h2>CTO Propulsion</h2>
         <p>{cto_propulsion}</p>
-        <img
-          src={tomMuellerImage}
-          alt="Tom Mueller avatar"
-          // className="ui medium image"
-        />
+        <img src={tomMuellerImage} alt="Tom Mueller avatar" />
       </section>
 
       <header className="about-header">

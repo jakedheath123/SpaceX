@@ -14,8 +14,10 @@
 }
 
 .about-container img {
-  width: 100%;
-  height: 100%;
+  /* float: left; */
+  width: 300px;
+  height: 300px;
+  /* background-size: cover; */
 }
 
 .about-box2 {
