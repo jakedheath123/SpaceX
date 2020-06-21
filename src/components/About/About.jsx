@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 
 import "./About.css";
 import elonImage from "../../images/elon.jpg";
-import gwynneShotwellImage from "../../images/gwynneShotwell.png";
+import gwynneShotwellImage from "../../images/gwynneShotwell.jpg";
 import tomMuellerImage from "../../images/tomMueller.jpg";
 import { getCompanyInfo } from "../../actions";
 import Loader from "../Loader/Loader";
