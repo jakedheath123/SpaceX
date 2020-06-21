@@ -2,6 +2,7 @@
   display: grid;
   grid-template-areas: "links links links";
   grid-gap: 1rem;
+  margin-top: -2rem;
 }
 
 .links {

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
+import "./About.css";
 import elonImage from "../../images/elon.jpg";
 import gwynneShotwellImage from "../../images/gwynneShotwell.png";
 import tomMuellerImage from "../../images/tomMueller.jpg";
