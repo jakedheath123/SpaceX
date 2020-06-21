@@ -11,6 +11,10 @@
   grid-area: keys;
 }
 
+.keys div {
+  display: flex;
+}
+
 .header {
   grid-area: header;
 }
@@ -26,9 +30,17 @@
 
 .launches li {
   display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #080808;
 }
 
-.launches li img {
+.launches img {
   width: 20%;
   height: 20%;
+}
+
+.launches-link {
+  margin-left: auto;
+  margin-right: 3rem;
 }

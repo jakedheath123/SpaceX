@@ -15,7 +15,7 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
         {mission_name}{" "}
       </h1>
 
-      <Link to={`/launches/${flight_number}`}>
+      <Link to={`/launches/${flight_number}`} className="launches-link">
         <button onClick={setTogglerFalse} className="ui secondary button">
           Launch Details
         </button>

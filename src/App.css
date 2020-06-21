@@ -1,6 +1,8 @@
-.app {
+body {
   background-color: black;
   color: white;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 ul {

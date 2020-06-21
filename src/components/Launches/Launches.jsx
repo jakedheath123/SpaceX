@@ -17,12 +17,12 @@ const Launches = ({ getLaunches, launches }) => {
       <main className="container">
         <div className="keys">
           <div>
+            <i className="square icon" style={{ color: "green" }} />
             <p>= Success</p>
-            <i className="square icon" style={{ color: "green" }} />{" "}
           </div>
           <div>
+            <i className="square icon" style={{ color: "red" }} />
             <p>= Fail</p>
-            <i className="square icon" style={{ color: "red" }} />{" "}
           </div>
         </div>
         <div className="header">
