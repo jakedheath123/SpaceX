@@ -32,8 +32,8 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
   } = spaceXInfo;
 
   return (
-    <main className="container-about">
-      <div className="content-1">
+    <main>
+      <section>
         <h2>CEO and CTO</h2>
         <p>{ceo}</p>
         <img
@@ -41,8 +41,8 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           alt="Elon Musk avatar"
           className="ui medium image"
         />
-      </div>
-      <div className="content-2">
+      </section>
+      <section>
         <h2>COO</h2>
         <p>{coo}</p>
         <img
@@ -50,8 +50,8 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           alt="Gwynne Shotwell avatar"
           className="ui medium image"
         />
-      </div>
-      <div className="content-3">
+      </section>
+      <section>
         <h2>CTO Propulsion</h2>
         <p>{cto_propulsion}</p>
         <img
@@ -59,13 +59,13 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           alt="Tom Mueller avatar"
           className="ui medium image"
         />
-      </div>
+      </section>
 
-      <div className="header">
+      <header>
         <h1>{name}</h1>
         <p>{summary}</p>
-      </div>
-      <div className="sidebar">
+      </header>
+      <details>
         <ul>
           <li>Founder: {founder}</li>
           <li>Founded: {founded}</li>
@@ -74,19 +74,19 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           <li>Launch Sites: {launch_sites}</li>
           <li>Valuation : ${valuation}</li>
         </ul>
-      </div>
-      <div className="box-1">
+      </details>
+      <aside>
         <h2>Headquarters</h2>
         <p>{address}</p>
         <p>{city}</p>
         <p>{state}</p>
-      </div>
-      <div className="box-2">
+      </aside>
+      <aside>
         <h2>Links</h2>
         <p>{website}</p>
         <p>{twitter}</p>
         <p>{elon_twitter}</p>
-      </div>
+      </aside>
     </main>
   );
 };
