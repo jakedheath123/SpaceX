@@ -1,0 +1,43 @@
+.about-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "about-header about-header  about-header"
+    "about-box1 about-box2 about-box3 "
+    "about-details about-address about-links";
+  align-items: center;
+  justify-content: center;
+}
+
+.about-box1 {
+  grid-area: about-box1;
+}
+
+.about-container img {
+  width: 100%;
+  height: 100%;
+}
+
+.about-box2 {
+  grid-area: about-box2;
+}
+
+.about-box3 {
+  grid-area: about-box3;
+}
+
+.about-header {
+  grid-area: about-header;
+}
+
+.about-details {
+  grid-area: about-details;
+}
+
+.about-address {
+  grid-area: about-address;
+}
+
+.about-links {
+  grid-area: about-links;
+}

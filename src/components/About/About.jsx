@@ -32,40 +32,40 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
   } = spaceXInfo;
 
   return (
-    <main>
-      <section>
+    <main className="about-container">
+      <section className="about-box1">
         <h2>CEO and CTO</h2>
         <p>{ceo}</p>
         <img
           src={elonImage}
           alt="Elon Musk avatar"
-          className="ui medium image"
+          // className="ui medium image"
         />
       </section>
-      <section>
+      <section className="about-box2">
         <h2>COO</h2>
         <p>{coo}</p>
         <img
           src={gwynneShotwellImage}
           alt="Gwynne Shotwell avatar"
-          className="ui medium image"
+          // className="ui medium image"
         />
       </section>
-      <section>
+      <section className="about-box3">
         <h2>CTO Propulsion</h2>
         <p>{cto_propulsion}</p>
         <img
           src={tomMuellerImage}
           alt="Tom Mueller avatar"
-          className="ui medium image"
+          // className="ui medium image"
         />
       </section>
 
-      <header>
+      <header className="about-header">
         <h1>{name}</h1>
         <p>{summary}</p>
       </header>
-      <details>
+      <details className="about-details">
         <ul>
           <li>Founder: {founder}</li>
           <li>Founded: {founded}</li>
@@ -75,13 +75,13 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           <li>Valuation : ${valuation}</li>
         </ul>
       </details>
-      <aside>
+      <aside className="about-address">
         <h2>Headquarters</h2>
         <p>{address}</p>
         <p>{city}</p>
         <p>{state}</p>
       </aside>
-      <aside>
+      <aside className="about-links">
         <h2>Links</h2>
         <p>{website}</p>
         <p>{twitter}</p>
