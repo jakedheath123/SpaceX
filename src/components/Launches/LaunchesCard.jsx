@@ -9,11 +9,7 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
 
   return (
     <li>
-      <img
-        src={links.mission_patch}
-        alt="Launch Logo"
-        className="ui medium image"
-      />
+      <img src={links.mission_patch} alt="Launch Logo" />
 
       <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
         {mission_name}{" "}

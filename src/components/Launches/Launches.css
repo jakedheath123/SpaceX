@@ -27,3 +27,8 @@
 .launches li {
   display: flex;
 }
+
+.launches li img {
+  width: 20%;
+  height: 20%;
+}
