@@ -26,11 +26,9 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
     cto_propulsion,
     valuation,
     summary,
-    headquarters,
-    links
+    headquarters: { address, city, state },
+    links: { website, twitter, elon_twitter }
   } = spaceXInfo;
-  const { address, city, state } = headquarters;
-  const { website, twitter, elon_twitter } = links;
 
   return (
     <main className="container-about">
