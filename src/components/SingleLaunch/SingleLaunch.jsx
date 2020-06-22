@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Link } from "@reach/router";
 
+import "./SingleLaunch.css";
 import { getSingleLaunch } from "../../actions";
 import Loader from "../Loader/Loader";
 import ViewToggler from "../ViewToggler/ViewToggler";
@@ -62,8 +63,6 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
       </div>
       <div className="singleLaunch-toggler">
         <ViewToggler>
-          <br></br>
-          <br></br>
           {!flickr_images.length ? <p>No images</p> : null}
           <ul>
             {flickr_images.map(image => {

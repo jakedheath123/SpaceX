@@ -10,9 +10,6 @@ const ViewToggler = ({ isVisible, children, toggleVisible }) => {
         {isVisible ? "Hide Flickr Images" : "Display Flickr Images"}
       </button>
       {isVisible && children}
-      <br></br>
-      <br></br>
-      <hr></hr>
     </>
   );
 };
