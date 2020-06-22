@@ -23,18 +23,17 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   const { rocket_name, rocket_type } = rocket;
 
   return (
-    <main>
-      <div>
-        <div>
-          <Link to="/launches">
-            <button className="ui button">Back</button>
-          </Link>
-        </div>
+    <main className="singleLaunch-container">
+      <div className="singleLaunch-box1">
+        <Link to="/launches">
+          <button className="ui button">Back</button>
+        </Link>
+
         <h1>{mission_name}</h1>
         <img src={mission_patch_small} alt="Mission Patch" />
         <p>{details ? `Mission Details: ${details}` : null}</p>
       </div>
-      <div>
+      <div className="singleLaunch-table">
         <table className="ui celled inverted selectable table">
           <thead className="">
             <tr className="">
@@ -61,11 +60,11 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
           </tbody>
         </table>
       </div>
-      <div>
+      <div className="singleLaunch-toggler">
         <ViewToggler>
           <br></br>
           <br></br>
-          {!flickr_images.length ? "No images" : null}
+          {!flickr_images.length ? <p>No images</p> : null}
           <ul>
             {flickr_images.map(image => {
               return (
