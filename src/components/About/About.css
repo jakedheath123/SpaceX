@@ -14,10 +14,8 @@
 }
 
 .about-container img {
-  /* float: left; */
   width: 350px;
   height: 500px;
-  /* background-size: cover; */
 }
 
 .about-box2 {
@@ -42,4 +40,16 @@
 
 .about-links {
   grid-area: about-links;
+}
+
+.about-box1,
+.about-box2,
+.about-box3,
+.about-links,
+.about-address,
+.about-details,
+.about-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

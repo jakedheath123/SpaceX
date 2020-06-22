@@ -53,7 +53,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
         <h1>{name}</h1>
         <p>{summary}</p>
       </header>
-      <details className="about-details">
+      <section className="about-details">
         <ul>
           <li>Founder: {founder}</li>
           <li>Founded: {founded}</li>
@@ -62,7 +62,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
           <li>Launch Sites: {launch_sites}</li>
           <li>Valuation : ${valuation}</li>
         </ul>
-      </details>
+      </section>
       <aside className="about-address">
         <h2>Headquarters</h2>
         <p>{address}</p>
