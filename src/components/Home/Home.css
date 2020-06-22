@@ -1,0 +1,30 @@
+.home-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas: "home-box1 home-box2 home-box3";
+  align-items: center;
+}
+
+.home-box1 {
+  grid-area: home-box1;
+}
+
+.home-box2 {
+  grid-area: home-box2;
+}
+
+.home-box1,
+.home-box3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-box2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.home-box3 {
+  grid-area: home-box3;
+}

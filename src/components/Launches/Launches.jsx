@@ -14,7 +14,7 @@ const Launches = ({ getLaunches, launches }) => {
   const renderLaunchesList = () => {
     if (!launches.length) return <Loader />;
     return (
-      <main className="container">
+      <main className="launches-container">
         <div className="keys">
           <div>
             <i className="square icon" style={{ color: "green" }} />

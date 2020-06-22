@@ -26,7 +26,7 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
   return (
     <main className="singleLaunch-container">
       <div className="singleLaunch-box1">
-        <Link to="/launches">
+        <Link to="/launches" className="link-box1">
           <button className="ui button">Back</button>
         </Link>
 
