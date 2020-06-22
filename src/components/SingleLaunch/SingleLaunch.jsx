@@ -14,14 +14,14 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
 
   if (!oneFlight) return <Loader />;
 
-  const { mission_name, details, launch_date_local, links, rocket } = oneFlight;
   const {
-    mission_patch_small,
-    article_link,
-    video_link,
-    flickr_images
-  } = links;
-  const { rocket_name, rocket_type } = rocket;
+    mission_name,
+    details,
+    launch_year,
+    launch_date_local,
+    links: { mission_patch_small, article_link, video_link, flickr_images },
+    rocket: { rocket_name, rocket_type }
+  } = oneFlight;
 
   return (
     <main className="singleLaunch-container">
@@ -31,6 +31,7 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
         </Link>
 
         <h1>{mission_name}</h1>
+        <h2>{launch_year}</h2>
         <img src={mission_patch_small} alt="Mission Patch" />
         <p>{details ? `Mission Details: ${details}` : null}</p>
       </div>
