@@ -71,9 +71,9 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
       </aside>
       <aside className="about-links">
         <h2>Links</h2>
-        <p>{website}</p>
-        <p>{twitter}</p>
-        <p>{elon_twitter}</p>
+        <a href={{ website }}>SpaceX</a>
+        <a href={twitter}>Twitter</a>
+        <a href={elon_twitter}>Elon Musk Twitter</a>
       </aside>
     </main>
   );
