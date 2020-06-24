@@ -8,6 +8,7 @@ body {
 
 ul {
   padding: 0;
+  font-family: "Anaheim", sans-serif;
 }
 
 li {
@@ -30,6 +31,7 @@ h5 {
   font-family: "Syncopate", sans-serif;
 }
 
-p {
+p,
+a {
   font-family: "Anaheim", sans-serif;
 }
