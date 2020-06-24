@@ -1,7 +1,9 @@
 .home-container {
   display: grid;
   grid-gap: 1rem;
-  grid-template-areas: "home-box1 home-box2 home-box3";
+  grid-template-areas:
+    "home-box2 home-box2 home-box2 home-box2"
+    "home-box1 home-box1 home-box3 home-box3";
   align-items: center;
 }
 
@@ -22,7 +24,7 @@
 
 .home-box2 img {
   width: 100%;
-  height: 100%;
+  height: 150%;
 }
 
 .home-box3 {
