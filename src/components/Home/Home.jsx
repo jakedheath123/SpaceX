@@ -38,16 +38,18 @@ const HomePage = ({ getLaunches, launches }) => {
         </Link>
       </div>
       <div className="home-box4">
-        <h2>{totalLaunches ? totalLaunches : null}</h2>
-        <h3>Total Launches</h3>
-      </div>
-      <div className="home-box5">
-        <h2>
-          {successfulLaunchTotal
-            ? `${Math.round((successfulLaunchTotal / totalLaunches) * 100)}%`
-            : null}
-        </h2>
-        <h3>Launch Success</h3>
+        <div>
+          <h2>{totalLaunches ? totalLaunches : null}</h2>
+          <h3>TOTAL LAUNCHES</h3>
+        </div>
+        <div>
+          <h2>
+            {successfulLaunchTotal
+              ? `${Math.round((successfulLaunchTotal / totalLaunches) * 100)}%`
+              : null}
+          </h2>
+          <h3>LAUNCH SUCCESS</h3>
+        </div>
       </div>
     </main>
   );
