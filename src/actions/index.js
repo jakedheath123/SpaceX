@@ -8,7 +8,7 @@ import {
 } from "./types";
 
 export const getLaunches = () => dispatch =>
-  spaceXDb.get("/launches?limit=30&&order=asc").then(response => {
+  spaceXDb.get("/launches?order=asc").then(response => {
     return dispatch({
       type: GET_LAUNCHES,
       payload: response.data
