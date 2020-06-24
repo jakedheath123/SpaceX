@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "@reach/router";
+import { connect } from "react-redux";
 
+import { getLaunches } from "../../actions";
 import "./Home.css";
 import earth from "../../images/earth.jpg";
 
@@ -26,4 +28,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default connect(null, { getLaunches })(HomePage);
