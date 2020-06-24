@@ -3,6 +3,7 @@ body {
   color: white;
   margin-left: 10%;
   margin-right: 10%;
+  line-height: 200%;
 }
 
 ul {
@@ -19,4 +20,16 @@ h2 {
 
 h3 {
   margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Syncopate", sans-serif;
+}
+
+p {
+  font-family: "Anaheim", sans-serif;
 }

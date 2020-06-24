@@ -10,13 +10,13 @@ const NavBar = () => {
       <div className="links">
         <img src={logo} alt="spaceX logo" className="ui small image" />
         <Link to="/">
-          <p>Home</p>
+          <h2>Home</h2>
         </Link>
         <Link to="/about">
-          <p>About</p>
+          <h2>About</h2>
         </Link>
         <Link to="/launches">
-          <p>Launches</p>
+          <h2>Launches</h2>
         </Link>
       </div>
     </nav>
