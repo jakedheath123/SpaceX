@@ -3,7 +3,7 @@
   grid-gap: 1rem;
   grid-template-areas:
     "home-box2 home-box2 home-box2 home-box2"
-    "home-box1 home-box1 home-box3 home-box3";
+    "home-box1 home-box4 home-box5 home-box3";
   align-items: center;
 }
 
@@ -16,7 +16,9 @@
 }
 
 .home-box1,
-.home-box3 {
+.home-box3,
+.home-box4,
+.home-box5 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,4 +31,12 @@
 
 .home-box3 {
   grid-area: home-box3;
+}
+
+.home-box4 {
+  grid-area: home-box4;
+}
+
+.home-box5 {
+  grid-area: home-box5;
 }
