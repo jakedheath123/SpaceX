@@ -55,6 +55,7 @@ const About = ({ getCompanyInfo, spaceXInfo }) => {
       </header>
       <section className="about-details">
         <ul>
+          <h2>Details</h2>
           <li>Founder: {founder}</li>
           <li>Founded: {founded}</li>
           <li>Employees: {employees}</li>
