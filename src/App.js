@@ -15,7 +15,7 @@ const Launches = lazy(() => import("./components/Launches/Launches"));
 
 function App() {
   return (
-    <div className="app">
+    <>
       <NavBar />
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
@@ -27,7 +27,7 @@ function App() {
           </Router>
         </Suspense>
       </ErrorBoundary>
-    </div>
+    </>
   );
 }
 
