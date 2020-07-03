@@ -5,12 +5,12 @@ import { toggleVisible } from "../../actions";
 
 const ViewToggler = ({ isVisible, children, toggleVisible }) => {
   return (
-    <>
+    <section>
       <button onClick={toggleVisible} className="ui button">
         {isVisible ? "Hide Flickr Images" : "Display Flickr Images"}
       </button>
       {isVisible && children}
-    </>
+    </section>
   );
 };
 
