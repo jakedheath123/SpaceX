@@ -6,8 +6,8 @@ import Loader from "./components/Loader/Loader";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
 import NavBar from "./components/NavBar/NavBar";
 
-const SingleLaunch = lazy(() =>
-  import("./components/SingleLaunch/SingleLaunch")
+const SingleLaunchCard = lazy(() =>
+  import("./components/SingleLaunch/SingleLaunchCard")
 );
 const LaunchesList = lazy(() => import("./components/Launches/LaunchesList"));
 
@@ -19,7 +19,7 @@ function App() {
         <Suspense fallback={<Loader />}>
           <Router primary={false}>
             <LaunchesList path="/" />
-            <SingleLaunch path="/launches/:flight_number" />
+            <SingleLaunchCard path="/launches/:flight_number" />
           </Router>
         </Suspense>
       </ErrorBoundary>
