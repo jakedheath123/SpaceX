@@ -27,9 +27,11 @@ const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
         </p>
       </aside>
       <section className="launches-card">
-        {launches.map(launch => {
-          return <LaunchesCard key={launch.flight_number} launch={launch} />;
-        })}
+        <ul>
+          {launches.map(launch => {
+            return <LaunchesCard key={launch.flight_number} launch={launch} />;
+          })}
+        </ul>
       </section>
     </main>
   );
