@@ -14,7 +14,10 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
 
   return (
     <li>
-      <img src={mission_patch_small} alt="Mission patch" />
+      {mission_patch_small ? (
+        <img src={mission_patch_small} alt="Mission patch" />
+      ) : null}
+
       <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
         {mission_name}{" "}
       </h1>

@@ -32,7 +32,10 @@ const SingleLaunchCard = ({ getSingleLaunch, flight_number, oneFlight }) => {
 
         <h1>{mission_name}</h1>
         <h2>{launch_year}</h2>
-        <img src={mission_patch_small} alt="Mission Patch" />
+        {mission_patch_small ? (
+          <img src={mission_patch_small} alt="Mission Patch" />
+        ) : null}
+
         <p>{details ? `Mission Details: ${details}` : null}</p>
       </div>
       <div className="singleLaunch-table">
