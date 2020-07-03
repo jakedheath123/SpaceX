@@ -13,22 +13,20 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
   } = launch;
 
   return (
-    <ul>
-      <li>
-        {mission_patch_small ? (
-          <img src={mission_patch_small} alt="Mission patch" />
-        ) : null}
+    <li>
+      {mission_patch_small ? (
+        <img src={mission_patch_small} alt="Mission patch" />
+      ) : null}
 
-        <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
-          {mission_name}{" "}
-        </h1>
-        <Link to={`/launches/${flight_number}`} className="launches-link">
-          <button onClick={setTogglerFalse} className="ui secondary button">
-            Launch Details
-          </button>
-        </Link>
-      </li>
-    </ul>
+      <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
+        {mission_name}{" "}
+      </h1>
+      <Link to={`/launches/${flight_number}`} className="launches-link">
+        <button onClick={setTogglerFalse} className="ui secondary button">
+          Launch Details
+        </button>
+      </Link>
+    </li>
   );
 };
 
