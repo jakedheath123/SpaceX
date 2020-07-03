@@ -3,8 +3,8 @@
   grid-gap: 1rem;
   grid-template-areas:
     "singleLaunch-box1 singleLaunch-box1 singleLaunch-box1"
-    "singleLaunch-table singleLaunch-table singleLaunch-table"
     "singleLaunch-toggler singleLaunch-toggler singleLaunch-toggler";
+  margin: 0% 10% 0% 10%;
 }
 
 .singleLaunch-box1 {
@@ -21,10 +21,6 @@
 
 .singleLaunch-box1 img {
   margin-bottom: 1rem;
-}
-
-.singleLaunch-table {
-  grid-area: singleLaunch-table;
 }
 
 .singleLaunch-toggler {

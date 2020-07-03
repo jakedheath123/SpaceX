@@ -8,14 +8,8 @@ const NavBar = () => {
   return (
     <nav className="container">
       <div className="links">
-        <img src={logo} alt="spaceX logo" className="ui small image" />
+        <img src={logo} alt="spaceX logo" />
         <Link to="/">
-          <h2>Home</h2>
-        </Link>
-        <Link to="/about">
-          <h2>About</h2>
-        </Link>
-        <Link to="/launches">
           <h2>Launches</h2>
         </Link>
       </div>

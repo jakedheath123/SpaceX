@@ -1,0 +1,39 @@
+.launches-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-areas:
+    "launches-header launches-header launches-header"
+    "launches-keys launches-keys launches-keys"
+    "launches-card launches-card launches-card";
+  margin: 0% 10% 0% 10%;
+}
+
+.launches-keys {
+  grid-area: launches-keys;
+}
+
+.launches-header {
+  grid-area: launches-header;
+}
+
+.launches-card {
+  grid-area: launches-card;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.launches-card li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  background-color: #080808;
+}
+
+.launches-card img {
+  width: 10%;
+  height: 10%;
+}
+
+.launches-link {
+  margin-left: auto;
+  margin-right: 3rem;
+}
