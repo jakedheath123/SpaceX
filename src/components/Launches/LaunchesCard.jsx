@@ -1,10 +1,7 @@
 import React from "react";
 import { Link } from "@reach/router";
-import { connect } from "react-redux";
 
-import { setTogglerFalse } from "../../actions";
-
-const LaunchesCard = ({ launch, setTogglerFalse }) => {
+const LaunchesCard = ({ launch }) => {
   const {
     flight_number,
     mission_name,
@@ -22,14 +19,10 @@ const LaunchesCard = ({ launch, setTogglerFalse }) => {
         {mission_name}{" "}
       </h1>
       <Link to={`/launches/${flight_number}`} className="launches-link">
-        <button onClick={setTogglerFalse} className="ui secondary button">
-          Launch Details
-        </button>
+        <button className="ui secondary button">Launch Details</button>
       </Link>
     </li>
   );
 };
 
-export default connect(null, {
-  setTogglerFalse
-})(LaunchesCard);
+export default LaunchesCard;
