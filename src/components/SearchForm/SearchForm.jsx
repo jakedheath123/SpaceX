@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
-import { searchByYear } from "../../actions";
+import { getLaunches } from "../../actions";
 
-const SearchForm = ({ searchByYear }) => {
+const SearchForm = ({ getLaunches }) => {
   const [launchYear, setLaunchYear] = useState("");
 
   useEffect(() => {
-    searchByYear(launchYear);
-  }, [searchByYear, launchYear]);
+    getLaunches(launchYear);
+  }, [getLaunches, launchYear]);
 
   const handleChange = event => {
     const { value } = event.target;
@@ -78,5 +78,5 @@ const SearchForm = ({ searchByYear }) => {
 };
 
 export default connect(null, {
-  searchByYear
+  getLaunches
 })(SearchForm);
