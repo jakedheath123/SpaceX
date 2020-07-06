@@ -3,8 +3,7 @@ import {
   GET_LAUNCHES,
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
-  SET_TOGGLER_FALSE,
-  SEARCH_BY_YEAR
+  SET_TOGGLER_FALSE
 } from "./types";
 
 export const getLaunches = launch_year => dispatch =>
@@ -40,12 +39,5 @@ export const toggleVisible = () => {
 export const setTogglerFalse = () => {
   return {
     type: SET_TOGGLER_FALSE
-  };
-};
-
-export const searchByYear = year => {
-  return {
-    type: SEARCH_BY_YEAR,
-    payload: year
   };
 };
