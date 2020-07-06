@@ -15,8 +15,9 @@ const ViewToggler = ({ isVisible, children, toggleVisible }) => {
 };
 
 const mapStateToProps = state => {
+  const { isVisible } = state.viewToggler;
   return {
-    isVisible: state.showOrHide.isVisible
+    isVisible
   };
 };
 
