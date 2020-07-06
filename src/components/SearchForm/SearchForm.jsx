@@ -21,7 +21,7 @@ const SearchForm = ({ getLaunches }) => {
         Search By Year:
         <select onChange={handleChange} value={launchYear}>
           <option name="allYears" value="">
-            All Years
+            All Years(Default)
           </option>
           <option name="2021" value="2021">
             2021
