@@ -3,7 +3,7 @@ import React from "react";
 import "./Header.css";
 import logo from "../../images/logo.jpg";
 
-const NavBar = () => {
+const Header = () => {
   return (
     <header className="header-container">
       <div className="header-logo">
@@ -13,4 +13,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;
