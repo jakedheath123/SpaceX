@@ -4,7 +4,7 @@ import { Router } from "@reach/router";
 import "./App.css";
 import Loader from "./components/Loader/Loader";
 import ErrorBoundary from "./components/ErrorBoundary/ErrorBoundary";
-import NavBar from "./components/NavBar/NavBar";
+import Header from "./components/Header/Header";
 
 const SingleLaunchCard = lazy(() =>
   import("./components/SingleLaunch/SingleLaunchCard")
@@ -14,7 +14,7 @@ const LaunchesList = lazy(() => import("./components/Launches/LaunchesList"));
 function App() {
   return (
     <>
-      <NavBar />
+      <Header />
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
           <Router primary={false}>
