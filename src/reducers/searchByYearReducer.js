@@ -1,11 +1,11 @@
 const INITIAL_STATE = {
-  year: ""
+  launchYear: ""
 };
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "SEARCH_BY_YEAR":
-      return { ...state, year: action.payload };
+      return { ...state, launchYear: action.payload };
     default:
       return state;
   }
