@@ -5,6 +5,7 @@ import "./LaunchesList.css";
 import { getLaunches } from "../../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
+import SearchForm from "../SearchForm/SearchForm";
 
 const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
   useEffect(() => {
@@ -14,24 +15,29 @@ const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
   if (isLoading) return <Loader />;
 
   return (
-    <main className="launches-container">
-      <aside className="launches-keys">
-        <h1>Launches</h1>
-        <p>
-          <i className="square icon" style={{ color: "green" }} /> = Success
-        </p>
-        <p>
-          <i className="square icon" style={{ color: "red" }} /> = Fail
-        </p>
-      </aside>
-      <section className="launches-card">
-        <ul>
-          {launches.map(launch => {
-            return <LaunchesCard key={launch.flight_number} launch={launch} />;
-          })}
-        </ul>
-      </section>
-    </main>
+    <>
+      <SearchForm />
+      <main className="launches-container">
+        <aside className="launches-keys">
+          <h1>Launches</h1>
+          <p>
+            <i className="square icon" style={{ color: "green" }} /> = Success
+          </p>
+          <p>
+            <i className="square icon" style={{ color: "red" }} /> = Fail
+          </p>
+        </aside>
+        <section className="launches-card">
+          <ul>
+            {launches.map(launch => {
+              return (
+                <LaunchesCard key={launch.flight_number} launch={launch} />
+              );
+            })}
+          </ul>
+        </section>
+      </main>
+    </>
   );
 };
 
