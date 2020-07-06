@@ -3,12 +3,17 @@
   grid-gap: 1rem;
   grid-template-areas:
     "launches-keys launches-keys launches-keys"
+    " launches-search-form launches-search-form launches-search-form "
     "launches-card launches-card launches-card";
   margin: 0% 10% 0% 10%;
 }
 
 .launches-keys {
   grid-area: launches-keys;
+}
+
+.launches-search-form {
+  grid-area: launches-search-form;
 }
 
 .launches-card {
