@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "@reach/router";
 
 import "./SingleLaunchCard.css";
-import { getSingleLaunch } from "../../actions";
+import { getSingleLaunch, setTogglerFalse } from "../../actions";
 import Loader from "../Loader/Loader";
 import ViewToggler from "../ViewToggler/ViewToggler";
 import SingleLaunchImages from "../SingleLaunch/SingleLaunchImages";
@@ -11,7 +11,8 @@ import SingleLaunchImages from "../SingleLaunch/SingleLaunchImages";
 const SingleLaunchCard = ({
   getSingleLaunch,
   flight_number,
-  singleLaunch: { singleFlight, isLoading }
+  singleLaunch: { singleFlight, isLoading },
+  setTogglerFalse
 }) => {
   useEffect(() => {
     getSingleLaunch(flight_number);
@@ -30,7 +31,9 @@ const SingleLaunchCard = ({
     <main className="single-launch-container">
       <section className="single-launch-box1">
         <Link to="/" className="link-box1">
-          <button className="ui button">Back</button>
+          <button onClick={setTogglerFalse} className="ui button">
+            Back
+          </button>
         </Link>
         <h1>{mission_name}</h1>
         <h2>{launch_year}</h2>
@@ -53,5 +56,6 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps, {
-  getSingleLaunch
+  getSingleLaunch,
+  setTogglerFalse
 })(SingleLaunchCard);
