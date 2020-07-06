@@ -15,10 +15,8 @@ const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
 
   return (
     <main className="launches-container">
-      <header className="launches-header">
-        <h1>Launches</h1>
-      </header>
       <aside className="launches-keys">
+        <h1>Launches</h1>
         <p>
           <i className="square icon" style={{ color: "green" }} /> = Success
         </p>

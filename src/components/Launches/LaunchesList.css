@@ -2,7 +2,6 @@
   display: grid;
   grid-gap: 1rem;
   grid-template-areas:
-    "launches-header launches-header launches-header"
     "launches-keys launches-keys launches-keys"
     "launches-card launches-card launches-card";
   margin: 0% 10% 0% 10%;
@@ -10,10 +9,6 @@
 
 .launches-keys {
   grid-area: launches-keys;
-}
-
-.launches-header {
-  grid-area: launches-header;
 }
 
 .launches-card {
