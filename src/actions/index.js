@@ -3,16 +3,23 @@ import {
   GET_LAUNCHES,
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
-  SET_TOGGLER_FALSE
+  SET_TOGGLER_FALSE,
+  SEARCH_BY_YEAR
 } from "./types";
 
 export const getLaunches = () => dispatch =>
-  spaceXDb.get("/launches?order=asc").then(response => {
-    return dispatch({
-      type: GET_LAUNCHES,
-      payload: response.data
+  spaceXDb
+    .get("/launches", {
+      params: {
+        order: "asc"
+      }
+    })
+    .then(response => {
+      return dispatch({
+        type: GET_LAUNCHES,
+        payload: response.data
+      });
     });
-  });
 
 export const getSingleLaunch = flight_number => dispatch => {
   spaceXDb.get(`/launches/${flight_number}`).then(response => {
@@ -32,5 +39,12 @@ export const toggleVisible = () => {
 export const setTogglerFalse = () => {
   return {
     type: SET_TOGGLER_FALSE
+  };
+};
+
+export const searchByYear = year => {
+  return {
+    type: SEARCH_BY_YEAR,
+    payload: year
   };
 };
