@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 import "./LaunchesList.css";
@@ -8,16 +8,22 @@ import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
 const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
+  const [launchYear, setLaunchYear] = useState("");
+
   useEffect(() => {
-    getLaunches();
-  }, [getLaunches]);
+    getLaunches(launchYear);
+  }, [getLaunches, launchYear]);
+
+  const searchByLaunchYear = userSelection => {
+    setLaunchYear(userSelection);
+  };
 
   if (isLoading) return <Loader />;
 
   return (
     <main className="launches-container">
       <section className="launches-search-form">
-        <SearchForm />
+        <SearchForm searchByLaunchYear={searchByLaunchYear} />
       </section>
       <aside className="launches-keys">
         <h1>Launches</h1>
