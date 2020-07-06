@@ -7,11 +7,12 @@ import {
   SEARCH_BY_YEAR
 } from "./types";
 
-export const getLaunches = () => dispatch =>
+export const getLaunches = launch_year => dispatch =>
   spaceXDb
     .get("/launches", {
       params: {
-        order: "asc"
+        order: "asc",
+        launch_year
       }
     })
     .then(response => {
