@@ -2,15 +2,19 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 
 import "./LaunchesList.css";
-import { getLaunches } from "../../actions";
+import { getLaunches, searchByYear } from "../../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
-const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
+const Launches = ({
+  getLaunches,
+  launchesList: { isLoading, launches },
+  launchYear
+}) => {
   useEffect(() => {
-    getLaunches();
-  }, [getLaunches]);
+    getLaunches(launchYear);
+  }, [getLaunches, launchYear]);
 
   if (isLoading) return <Loader />;
 
@@ -43,10 +47,12 @@ const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
 
 const mapStateToProps = state => {
   return {
-    launchesList: state.launches
+    launchesList: state.launches,
+    launchYear: state.searchByYear.launchYear
   };
 };
 
 export default connect(mapStateToProps, {
-  getLaunches
+  getLaunches,
+  searchByYear
 })(Launches);
