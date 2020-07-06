@@ -7,7 +7,10 @@ import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
-const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
+const LaunchesList = ({
+  getLaunches,
+  launchesList: { isLoading, launches }
+}) => {
   const [launchYear, setLaunchYear] = useState("");
 
   useEffect(() => {
@@ -59,4 +62,4 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps, {
   getLaunches
-})(Launches);
+})(LaunchesList);
