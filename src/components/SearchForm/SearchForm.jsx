@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 
 import { searchByYear } from "../../actions";
@@ -6,12 +6,14 @@ import { searchByYear } from "../../actions";
 const SearchForm = ({ searchByYear }) => {
   const [year, setYear] = useState("");
 
+  useEffect(() => {
+    searchByYear(year);
+  }, [searchByYear, year]);
+
   const handleChange = event => {
     const { value } = event.target;
-    setYear(value);
+    if (value) setYear(value);
   };
-
-  searchByYear(year);
 
   return (
     <form>
