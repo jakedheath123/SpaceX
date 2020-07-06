@@ -6,7 +6,7 @@ import {
   SET_TOGGLER_FALSE
 } from "./types";
 
-export const getLaunches = launch_year => dispatch =>
+export const getAllLaunches = launch_year => dispatch =>
   spaceXDb
     .get("/launches", {
       params: {
