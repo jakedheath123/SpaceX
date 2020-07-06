@@ -2,32 +2,26 @@ import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
 
 import "./LaunchesList.css";
-import { getLaunches } from "../../actions";
+import { getAllLaunches } from "../../actions";
 import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
-const LaunchesList = ({
-  getLaunches,
-  launchesList: { isLoading, launches }
-}) => {
+const LaunchesList = ({ getAllLaunches, launches, isLoading }) => {
   const [launchYear, setLaunchYear] = useState("");
 
   useEffect(() => {
-    getLaunches(launchYear);
-  }, [getLaunches, launchYear]);
-
-  const searchByLaunchYear = userSelection => {
-    setLaunchYear(userSelection);
-  };
+    getAllLaunches(launchYear);
+  }, [getAllLaunches, launchYear]);
 
   if (isLoading) return <Loader />;
 
   return (
     <main className="launches-container">
-      <section className="launches-search-form">
-        <SearchForm searchByLaunchYear={searchByLaunchYear} />
-      </section>
+      <SearchForm
+        getQuery={userSelect => setLaunchYear(userSelect)}
+        className="launches-search-form"
+      />
       <aside className="launches-keys">
         <h1>Launches</h1>
         <p>
@@ -55,11 +49,13 @@ const LaunchesList = ({
 };
 
 const mapStateToProps = state => {
+  const { launches, isLoading } = state.getAllLaunches;
   return {
-    launchesList: state.launches
+    launches,
+    isLoading
   };
 };
 
 export default connect(mapStateToProps, {
-  getLaunches
+  getAllLaunches
 })(LaunchesList);
