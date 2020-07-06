@@ -5,7 +5,7 @@ import getSingleLaunchReducer from "./getSingleLaunchReducer";
 import viewTogglerReducer from "./viewTogglerReducer";
 
 export default combineReducers({
-  launches: getAllLaunchesReducer,
-  singleLaunch: getSingleLaunchReducer,
-  showOrHide: viewTogglerReducer
+  getAllLaunches: getAllLaunchesReducer,
+  getSingleLaunch: getSingleLaunchReducer,
+  viewToggler: viewTogglerReducer
 });
