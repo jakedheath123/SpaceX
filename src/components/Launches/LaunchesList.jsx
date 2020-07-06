@@ -15,33 +15,33 @@ const Launches = ({ getLaunches, launchesList: { isLoading, launches } }) => {
   if (isLoading) return <Loader />;
 
   return (
-    <>
-      <SearchForm />
-      <main className="launches-container">
-        <aside className="launches-keys">
-          <h1>Launches</h1>
-          <p>
-            <i className="square icon" style={{ color: "green" }} /> = Success
-          </p>
-          <p>
-            <i className="square icon" style={{ color: "red" }} /> = Fail
-          </p>
-        </aside>
-        <section className="launches-card">
-          {!launches.length ? (
-            <p>No Launches</p>
-          ) : (
-            <ul>
-              {launches.map(launch => {
-                return (
-                  <LaunchesCard key={launch.flight_number} launch={launch} />
-                );
-              })}
-            </ul>
-          )}
-        </section>
-      </main>
-    </>
+    <main className="launches-container">
+      <section className="launches-search-form">
+        <SearchForm />
+      </section>
+      <aside className="launches-keys">
+        <h1>Launches</h1>
+        <p>
+          <i className="square icon" style={{ color: "green" }} /> = Success
+        </p>
+        <p>
+          <i className="square icon" style={{ color: "red" }} /> = Fail
+        </p>
+      </aside>
+      <section className="launches-card">
+        {!launches.length ? (
+          <p>No Launches</p>
+        ) : (
+          <ul>
+            {launches.map(launch => {
+              return (
+                <LaunchesCard key={launch.flight_number} launch={launch} />
+              );
+            })}
+          </ul>
+        )}
+      </section>
+    </main>
   );
 };
 
