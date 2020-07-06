@@ -1,25 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const SearchForm = ({ getQuery }) => {
-  const [userSelection, setUserSelection] = useState("");
-
-  useEffect(() => {
-    getQuery(userSelection);
-  }, [getQuery, userSelection]);
-
-  const onChange = value => {
-    setUserSelection(value);
-  };
-
   return (
     <section>
       <form>
         <label>
           Search By Year:
-          <select
-            onChange={event => onChange(event.target.value)}
-            value={userSelection}
-          >
+          <select onChange={event => getQuery(event.target.value)}>
             <option name="allYears" value="">
               All Years(Default)
             </option>
