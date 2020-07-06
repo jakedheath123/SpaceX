@@ -4,23 +4,25 @@ import { connect } from "react-redux";
 import { searchByYear } from "../../actions";
 
 const SearchForm = ({ searchByYear }) => {
-  const [year, setYear] = useState("");
+  const [launchYear, setLaunchYear] = useState("");
 
   useEffect(() => {
-    searchByYear(year);
-  }, [searchByYear, year]);
+    searchByYear(launchYear);
+  }, [searchByYear, launchYear]);
 
   const handleChange = event => {
     const { value } = event.target;
-    if (value) setYear(value);
+    setLaunchYear(value);
   };
 
   return (
     <form>
       <label>
         Search By Year:
-        <select onChange={handleChange} value={year}>
-          <option></option>
+        <select onChange={handleChange} value={launchYear}>
+          <option name="allYears" value="">
+            All Years
+          </option>
           <option name="2021" value="2021">
             2021
           </option>
