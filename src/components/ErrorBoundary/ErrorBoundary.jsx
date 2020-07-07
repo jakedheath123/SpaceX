@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+import errorImage from "../../images/errorImage.png";
+import "./ErrorBoundary.css";
+
 class ErrorBoundary extends Component {
   state = {
     hasErrored: false
@@ -12,7 +15,13 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    if (this.state.hasErrored) return <div>An Error Has Occured</div>;
+    if (this.state.hasErrored)
+      return (
+        <div className="error-boundary-container">
+          <img src={errorImage} alt="Error display" />
+          <h2>Sorry this page is broken</h2>
+        </div>
+      );
     return this.props.children;
   }
 }
