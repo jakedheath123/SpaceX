@@ -11,7 +11,8 @@ export const getAllLaunches = launch_year => dispatch =>
     .get("/launches", {
       params: {
         order: "asc",
-        launch_year
+        launch_year,
+        limit: "50"
       }
     })
     .then(response => {
