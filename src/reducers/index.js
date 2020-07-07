@@ -1,11 +1,11 @@
 import { combineReducers } from "redux";
 
-import getAllLaunchesReducer from "./getAllLaunchesReducer";
-import getSingleLaunchReducer from "./getSingleLaunchReducer";
+import allLaunchesReducer from "./allLaunchesReducer";
+import singleLaunchReducer from "./singleLaunchReducer";
 import viewTogglerReducer from "./viewTogglerReducer";
 
 export default combineReducers({
-  getAllLaunches: getAllLaunchesReducer,
-  getSingleLaunch: getSingleLaunchReducer,
+  allLaunches: allLaunchesReducer,
+  singleLaunch: singleLaunchReducer,
   viewToggler: viewTogglerReducer
 });
