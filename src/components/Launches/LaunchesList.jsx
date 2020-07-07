@@ -7,7 +7,7 @@ import LaunchesCard from "./LaunchesCard";
 import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
-const LaunchesList = ({ getAllLaunches, launches, isLoading }) => {
+const LaunchesList = ({ getAllLaunches, data, isLoading }) => {
   const [launchYear, setLaunchYear] = useState("");
 
   useEffect(() => {
@@ -32,11 +32,11 @@ const LaunchesList = ({ getAllLaunches, launches, isLoading }) => {
         </p>
       </aside>
       <section className="launches-card">
-        {!launches.length ? (
+        {!data.length ? (
           <p>No Launches</p>
         ) : (
           <ul>
-            {launches.map(launch => {
+            {data.map(launch => {
               return (
                 <LaunchesCard key={launch.flight_number} launch={launch} />
               );
@@ -49,9 +49,9 @@ const LaunchesList = ({ getAllLaunches, launches, isLoading }) => {
 };
 
 const mapStateToProps = state => {
-  const { launches, isLoading } = state.getAllLaunches;
+  const { data, isLoading } = state.allLaunches;
   return {
-    launches,
+    data,
     isLoading
   };
 };
