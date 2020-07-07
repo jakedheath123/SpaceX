@@ -21,6 +21,10 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 }
+
+.launches-card p {
+  text-align: center;
+}
 .launches-card li {
   display: flex;
   align-items: center;
@@ -36,4 +40,30 @@
 .launches-link {
   margin-left: auto;
   margin-right: 3rem;
+}
+
+@media (max-width: 500px) {
+  .launches-container {
+    grid-template-areas:
+      "launches-keys "
+      "launches-search-form "
+      "launches-card";
+  }
+  .launches-card li {
+    flex-direction: column;
+  }
+
+  .launches-card li h1 {
+    font-size: 1rem;
+  }
+  .launches-link {
+    margin: 0;
+  }
+  .launches-card img {
+    width: 50%;
+    height: 50%;
+  }
+  .launches-keys h1 {
+    text-align: center;
+  }
 }
