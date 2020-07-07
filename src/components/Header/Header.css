@@ -17,3 +17,16 @@
   width: 150px;
   height: 150px;
 }
+
+@media (max-width: 500px) {
+  .header-container {
+    grid-template-areas: "links ";
+  }
+  .header-logo {
+    justify-content: center;
+  }
+  .header-logo img {
+    width: 100px;
+    height: 100px;
+  }
+}
