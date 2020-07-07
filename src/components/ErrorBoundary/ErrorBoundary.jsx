@@ -15,14 +15,16 @@ class ErrorBoundary extends Component {
   }
 
   render() {
-    if (this.state.hasErrored)
-      return (
-        <div className="error-boundary-container">
-          <img src={errorImage} alt="Error display" />
-          <h2>Sorry this page is broken</h2>
-        </div>
-      );
-    return this.props.children;
+    const { hasErrored } = this.state;
+    const { children } = this.props;
+    return hasErrored ? (
+      <div className="error-boundary-container">
+        <img src={errorImage} alt="Error display" />
+        <h2>Sorry this page is broken</h2>
+      </div>
+    ) : (
+      children
+    );
   }
 }
 
