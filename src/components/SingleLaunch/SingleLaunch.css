@@ -42,4 +42,8 @@
   .single-launch-info img {
     margin: 1rem 0rem 1rem 0rem;
   }
+  .single-launch-info h1 {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
