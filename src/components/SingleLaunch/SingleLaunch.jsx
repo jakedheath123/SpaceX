@@ -11,7 +11,7 @@ import SingleLaunchImages from "./SingleLaunchImages";
 const SingleLaunch = ({
   getSingleLaunch,
   flight_number,
-  singleLaunch,
+  data,
   isLoading,
   setTogglerFalse
 }) => {
@@ -26,7 +26,7 @@ const SingleLaunch = ({
     details,
     launch_year,
     links: { mission_patch_small, flickr_images }
-  } = singleLaunch;
+  } = data;
 
   return (
     <main className="single-launch-container">
@@ -53,9 +53,9 @@ const SingleLaunch = ({
 };
 
 const mapStateToProps = state => {
-  const { singleLaunch, isLoading } = state.getSingleLaunch;
+  const { data, isLoading } = state.singleLaunch;
   return {
-    singleLaunch,
+    data,
     isLoading
   };
 };
