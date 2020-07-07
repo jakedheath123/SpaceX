@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-const LaunchesCard = ({ launch }) => {
-  const {
+const LaunchesCard = ({
+  launch: {
     flight_number,
     mission_name,
     launch_success,
     links: { mission_patch_small }
-  } = launch;
-
+  }
+}) => {
   return (
     <li>
       {mission_patch_small ? (
