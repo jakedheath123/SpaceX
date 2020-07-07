@@ -1,6 +1,6 @@
 import spaceXDb from "../apis/spaceXDb";
 import {
-  GET_LAUNCHES,
+  GET_ALL_LAUNCHES,
   GET_SINGLE_LAUNCH,
   IS_VISIBLE,
   SET_TOGGLER_FALSE
@@ -17,7 +17,7 @@ export const getAllLaunches = launch_year => dispatch =>
     })
     .then(response => {
       return dispatch({
-        type: GET_LAUNCHES,
+        type: GET_ALL_LAUNCHES,
         payload: response.data
       });
     });
