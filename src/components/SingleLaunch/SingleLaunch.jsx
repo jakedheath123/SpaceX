@@ -30,8 +30,8 @@ const SingleLaunch = ({
 
   return (
     <main className="single-launch-container">
-      <section className="single-launch-box1">
-        <Link to="/" className="link-box1">
+      <section className="single-launch-info">
+        <Link to="/" className="link-button">
           <button onClick={setTogglerFalse} className="ui button">
             Back
           </button>
@@ -43,9 +43,11 @@ const SingleLaunch = ({
         ) : null}
         <p>{details ? `Mission Details: ${details}` : null}</p>
       </section>
-      <ViewToggler className="single-launch-toggler">
-        <SingleLaunchImages images={flickr_images} />
-      </ViewToggler>
+      <section className="single-launch-toggler">
+        <ViewToggler>
+          <SingleLaunchImages images={flickr_images} />
+        </ViewToggler>
+      </section>
     </main>
   );
 };
