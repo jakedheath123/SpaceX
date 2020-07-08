@@ -1,16 +1,8 @@
-.header-container {
-  display: grid;
-  grid-template-areas: "header-logo header-logo header-logo";
-  grid-gap: 1rem;
-  margin-top: -2rem;
-  margin: 0% 10% 0% 10%;
-}
-
 .header-logo {
-  grid-area: header-logo;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin: 0% 10% 0% 10%;
 }
 
 .header-logo img {
@@ -19,9 +11,6 @@
 }
 
 @media (max-width: 500px) {
-  .header-container {
-    grid-template-areas: "header-logo ";
-  }
   .header-logo {
     justify-content: center;
   }
