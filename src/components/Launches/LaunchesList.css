@@ -70,3 +70,9 @@
     text-align: center;
   }
 }
+
+@media (min-width: 501px) and (max-width: 1024px) {
+  .launches-card li h1 {
+    font-size: 1rem;
+  }
+}
