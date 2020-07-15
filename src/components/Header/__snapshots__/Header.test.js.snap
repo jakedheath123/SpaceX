@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component test suite renders Header component 1`] = `
+<header
+  className="header-logo"
+>
+  <img
+    alt="spaceX logo"
+    src="logo.jpg"
+  />
+</header>
+`;
