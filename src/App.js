@@ -11,7 +11,7 @@ import Header from "./components/Header/Header";
 const SingleLaunch = lazy(() =>
   import("./components/SingleLaunch/SingleLaunch")
 );
-const LaunchesList = lazy(() => import("./components/Launches/LaunchesList"));
+const Launches = lazy(() => import("./components/Launches/Launches"));
 
 function App(props) {
   return (
@@ -20,7 +20,7 @@ function App(props) {
       <ErrorBoundary>
         <Suspense fallback={<Loader />}>
           <Router primary={false}>
-            <LaunchesList path="/" {...props} />
+            <Launches path="/" {...props} />
             <SingleLaunch path="/launches/:flight_number" {...props} />
           </Router>
         </Suspense>
