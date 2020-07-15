@@ -1,34 +1,25 @@
 import React from "react";
 import { Link } from "@reach/router";
 
-const LaunchesCard = ({ launches }) => {
-  return !launches.length ? (
-    <p>No Launches</p>
-  ) : (
-    <ul>
-      {launches.map(launch => {
-        const {
-          flight_number,
-          mission_name,
-          launch_success,
-          links: { mission_patch_small }
-        } = launch;
-        return (
-          <li key={flight_number}>
-            {mission_patch_small ? (
-              <img src={mission_patch_small} alt="Mission patch" />
-            ) : null}
-
-            <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
-              {mission_name}{" "}
-            </h1>
-            <Link to={`/launches/${flight_number}`} className="launches-link">
-              <button className="ui secondary button">Launch Details</button>
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+const LaunchesCard = ({ launch }) => {
+  const {
+    flight_number,
+    mission_name,
+    launch_success,
+    links: { mission_patch_small }
+  } = launch;
+  return (
+    <li key={flight_number}>
+      {mission_patch_small ? (
+        <img src={mission_patch_small} alt="Mission patch" />
+      ) : null}
+      <h1 style={launch_success ? { color: "green" } : { color: "red" }}>
+        {mission_name}{" "}
+      </h1>
+      <Link to={`/launches/${flight_number}`} className="launches-link">
+        <button className="ui secondary button">Launch Details</button>
+      </Link>
+    </li>
   );
 };
 
