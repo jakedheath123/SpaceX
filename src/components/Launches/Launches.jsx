@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import "./Launches.css";
-import LaunchesList from "./LaunchesList";
+import LaunchesList from "./LaunchesList/LaunchesList";
 import Loader from "../Loader/Loader";
 import SearchForm from "../SearchForm/SearchForm";
 
