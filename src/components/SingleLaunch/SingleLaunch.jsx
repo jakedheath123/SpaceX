@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 
 import "./SingleLaunch.css";
 import Loader from "../Loader/Loader";
-import SingleLaunchCard from "./SingleLaunchCard";
+import SingleLaunchCard from "./SingleLaunchCard/SingleLaunchCard";
 
 const SingleLaunch = ({
   getSingleLaunch,
