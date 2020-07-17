@@ -10,7 +10,7 @@
     
 ## Description
    
-  SpaceX provides information on all the past and most recent SpaceX launches. As a user you are able to view the entire list of missions to date (by default) or filter by a particular year. Launch success or failure is represented by a green or red mission name respectively. Futher details about each specific mission can also be viewed, including a detailed description of the launch event and gallery of associated photographs of the launch itself.
+  SpaceX provides information on all the past and most recent SpaceX launches. As a user you are able to view the entire list of missions to date (by default) or filter by a particular year. Launch success or failure is represented by a green or red mission name respectively. Further details about each specific mission can also be viewed, including a detailed description of the launch event and gallery of associated photographs of the launch itself.
    
 ## Getting Started
 These instructions will provide you with a copy of the project on your local machine.
