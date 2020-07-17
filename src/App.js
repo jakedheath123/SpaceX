@@ -30,9 +30,10 @@ function App(props) {
 }
 
 const mapStateToProps = state => {
+  const { allLaunches, singleLaunch } = state;
   return {
-    allLaunches: state.allLaunches,
-    singleLaunch: state.singleLaunch
+    allLaunches,
+    singleLaunch
   };
 };
 
