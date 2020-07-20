@@ -61,7 +61,6 @@ npm start
 - [Redux](https://redux.js.org/)
 - [Axios](https://www.npmjs.com/package/axios)
 - [netlify](https://www.netlify.com/)
-- [Semantic UI](https://react.semantic-ui.com/)
 - HTML / HTML5
 - Media Queries
 
