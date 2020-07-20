@@ -2,8 +2,7 @@
 
 ## Overview
    
-   A React application which consolidates existing and new features and tools learned since completing the Northcoders bootcamp. This application is made of functional components with the use of React hooks, Redux for state management, code splitting with React lazy and semantic-ui.
-   
+   A React application which consolidates existing and new features and tools learned since completing the Northcoders bootcamp. This application is made of functional components with the use of React hooks, Redux for state management and code splitting with React lazy.
 ## Demo
 
 ![](demo.gif)
